@@ -165,3 +165,8 @@
         opacity: 0;
     }
 }
+@keyframes progressAnimation {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

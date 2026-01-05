@@ -15,7 +15,6 @@ export function mainSoftSkills() {
                 <div class="outer">
                     <div class="inner">
                         <div class="number n1">
-                            
                         </div>
                     </div>
                 </div>
@@ -27,7 +26,17 @@ export function mainSoftSkills() {
                 <div class="outer">
                     <div class="inner">
                         <div class="number n2">
-                            
+                        </div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="circularProgress3 bar3">
+                <div class="outer">
+                    <div class="inner">
+                        <div class="number n3">
                         </div>
                     </div>
                 </div>
@@ -39,6 +48,7 @@ export function mainSoftSkills() {
     `;
     const number1 = document.querySelector(".n1");
     const number2 = document.querySelector(".n2");
+    const number3 = document.querySelector(".n3");
     function calcNumber() {
         let i = 0;
         const interval = setInterval(() => {
@@ -56,10 +66,20 @@ export function mainSoftSkills() {
             number2.textContent = i + "%";
             if (i === 67) {
                 clearInterval(interval2);
-                
+            }
+        }, 30);
+    }
+    function calcNumber3() {
+        let i = 0;
+        const interval3 = setInterval(() => {
+            i++;
+            number3.textContent = i + "%";
+            if (i === 50) {
+                clearInterval(interval3);
             }
         }, 30);
     }
     calcNumber();
     calcNumber2();
+    calcNumber3();
 }

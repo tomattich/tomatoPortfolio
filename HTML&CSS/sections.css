@@ -293,18 +293,18 @@
 }
 
 /* Circular Progress Bar */
-.circularProgress1 , .circularProgress2 {
+.circularProgress1 , .circularProgress2 , .circularProgress3 {
     position: relative;
     height: 10rem;
     width: 10rem;
 }
-.circularProgress1 .outer , .circularProgress2 .outer {
+.circularProgress1 .outer , .circularProgress2 .outer , .circularProgress3 .outer {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
     padding: 1.25rem;
 }
-.circularProgress1 .inner , .circularProgress2 .inner {
+.circularProgress1 .inner , .circularProgress2 .inner , .circularProgress3 .inner {
     height: 7.5rem;
     width: 7.5rem;
     border-radius: 50%;
@@ -313,32 +313,32 @@
     justify-content: center;
 }
 .number {
-    font-weight: 600;
-
+    font-weight: lighter;
     font-size: 1.5rem;
 }
-.circularProgress1 circle , .circularProgress2 circle {
+.circularProgress1 circle , .circularProgress2 circle , .circularProgress3 circle {
     fill: none;
     stroke: var(--flavorColor);
-    stroke-width: 20px;
-    stroke-dashoffset: 472;
-    animation: anime 2s linear forwards;
+    stroke-width: .1rem;
+    stroke-dashoffset: 475;
+    animation: progressAnimation 3s linear forwards;
 }
 .circularProgress1 circle {
-    stroke-dasharray: 472;
+    stroke-dasharray: 452;
+    filter: hue-rotate(180deg);
 }
 .circularProgress2 circle {
     stroke-dasharray: 350;
+    filter: hue-rotate(120deg);
 }
-.circularProgress1 svg , .circularProgress2 svg {
+.circularProgress3 circle {
+    stroke-dasharray: 250;
+    filter: hue-rotate(240deg);
+}
+.circularProgress1 svg , .circularProgress2 svg , .circularProgress3 svg {
     position: absolute;
     top: 0;
     left: 0;
-}
-@keyframes anime {
-    100% {
-        stroke-dashoffset: 0;
-    }
 }
 
 /* All Projects Section */
