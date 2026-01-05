@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Initialize all page components
     
-    header();
     mainPage();
+    header();
     renderCover();
     renderSkills();
     globalButtons();

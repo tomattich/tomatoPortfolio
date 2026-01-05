@@ -66,6 +66,12 @@ export function header() {
         </div>
     `;
 
+    const cover = document.querySelector(".cover");
+    const summary = document.querySelector(".summary");
+    const mainSoftSkills = document.querySelector(".mainSoftSkills");
+    const allProjects = document.querySelector(".allProjects");
+    const projectsPage = document.querySelector(".projectsPage");
+    const testimonials = document.querySelector(".testimonials");
     const flavorList = document.querySelector(".flavorList");
     const flavorButton = document.querySelector(".flavorButton");
     const flavorButtons = document.querySelectorAll(".flavorButtons");
@@ -133,7 +139,7 @@ export function header() {
     
     optionsListAboutButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 750,
+            top: cover.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -142,7 +148,7 @@ export function header() {
     
     optionsListProjectsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 1950,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -151,7 +157,7 @@ export function header() {
     
     optionsListTestimonialsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 4200,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -160,7 +166,7 @@ export function header() {
 
     optionsListContactsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 5550,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight + testimonials.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -169,7 +175,7 @@ export function header() {
 
     allProjectsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 1950,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -178,7 +184,7 @@ export function header() {
     
     featuredProjectsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 3100,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -187,7 +193,7 @@ export function header() {
     
     aboutButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 750,
+            top: cover.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -196,7 +202,7 @@ export function header() {
     
     testimonialsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 4200,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -205,7 +211,7 @@ export function header() {
 
     contactsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 5550,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight + testimonials.offsetHeight,
             behavior: "smooth"
         });
     });

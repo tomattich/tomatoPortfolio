@@ -84,6 +84,12 @@ export function mainPage() {
    ========================================= */
 
 export function globalButtons() {
+    const cover = document.querySelector(".cover");
+    const summary = document.querySelector(".summary");
+    const mainSoftSkills = document.querySelector(".mainSoftSkills");
+    const allProjects = document.querySelector(".allProjects");
+    const projectsPage = document.querySelector(".projectsPage");
+    const testimonials = document.querySelector(".testimonials");
     const sideOptionsListAboutButton = document.querySelector(".sideOptionsListAboutButton");
     const sideOptionsListProjectsButton = document.querySelector(".sideOptionsListProjectsButton");
     const sideOptionsListTestimonialsButton = document.querySelector(".sideOptionsListTestimonialsButton");
@@ -175,7 +181,7 @@ export function globalButtons() {
 
     sideOptionsListAboutButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 750,
+            top: cover.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -184,7 +190,7 @@ export function globalButtons() {
 
     allProjectsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 1950,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -193,7 +199,7 @@ export function globalButtons() {
 
     featuredProjectsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 3100,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -226,7 +232,7 @@ export function globalButtons() {
 
     sideOptionsListTestimonialsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 4200,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight,
             behavior: "smooth"
         });
     });
@@ -235,7 +241,7 @@ export function globalButtons() {
 
     sideOptionsListContactsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: 5550,
+            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight + testimonials.offsetHeight,
             behavior: "smooth"
         });
     });
