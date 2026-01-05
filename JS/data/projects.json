@@ -1,0 +1,79 @@
+{
+    "1": {
+        "name": "TomatoValue",
+        "images": ["/assets/project1/project1img1.png", "/assets/project1/project1img2.png", "/assets/project1/project1img3.png", "/assets/project1/project1img4.png", "/assets/project1/project1img5.png"],
+        "description": "TomatoValue is the place to build and play your collection of Good Old Games and modern hits, With our games-first approach and respecting your need for ownership, we're here to make games last forever.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": true,
+            "frontend": true,
+            "database": true,
+            "design": true,
+            "featured": true
+        },
+        "genres": {
+            "e-shop": true,
+            "games": true,
+            "agriculture": false,
+            "chat": false
+        }
+    },
+    "2": {
+        "name": "TomatoShop",
+        "images": ["/assets/project2/project2img1.png", "/assets/project2/project2img2.png", "/assets/project2/project2img3.png", "/assets/project2/project2img4.png", "/assets/project2/project2img5.png"],
+        "description": "Your one-stop shop for all things agriculture. TomatoShop is a platform that allows you to buy and sell agricultural products. also it has a chat system to make it easier for you to communicate with the seller.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": false,
+            "frontend": true,
+            "database": false,
+            "design": true,
+            "featured": true
+        },
+        "genres": {
+            "e-shop": true,
+            "games": false,
+            "agriculture": true,
+            "chat": true
+        }
+    },
+    "3": {
+        "name": "TomatoChat",
+        "images": ["/assets/project3/project3img1.png", "/assets/project3/project3img2.png", "/assets/project3/project3img3.png", "/assets/project3/project3img4.png", "/assets/project3/project3img5.png"],
+        "description": "Your one-stop shop for all things agriculture. TomatoShop is a platform that allows you to buy and sell agricultural products. also it has a chat system to make it easier for you to communicate with the seller.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": false,
+            "frontend": true,
+            "database": false,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": true,
+            "games": true,
+            "agriculture": true,
+            "chat": true
+        }
+    },
+    "4": {
+        "name": "TomatoPlace",
+        "images": ["/assets/project4/project4img1.png", "/assets/project4/project4img2.png", "/assets/project4/project4img3.png", "/assets/project4/project4img4.png", "/assets/project4/project4img5.png"],
+        "description": "TomatoPlace is a platform for sharing your favorite places with others, it has a chat system to make it easier for you to communicate with other users.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": false,
+            "frontend": true,
+            "database": false,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": false,
+            "games": false,
+            "agriculture": false,
+            "chat": true
+        }
+    }
+    
+}

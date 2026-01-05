@@ -1,0 +1,46 @@
+/* =========================================
+   BASE STYLES
+   Imports, Reset, Variables, Body, Scrollbar
+   ========================================= */
+
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Comfortaa:wght@300..700&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa";
+    line-height: 1.3;
+}
+
+/* CSS Variables */
+:root {
+    --flavorColor: #27eb75;
+    --hueRotation: 150deg;
+}
+
+/* Body Base Styles */
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    grid-template-rows: auto;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: .2rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--flavorColor);
+}

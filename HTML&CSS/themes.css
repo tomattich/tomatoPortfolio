@@ -1,0 +1,93 @@
+/* =========================================
+   THEME STYLES
+   Dark mode and theme-specific overrides
+   ========================================= */
+
+.darkmode {
+    background-color: #000;
+    color: #fff;
+}
+
+.darkmode button {
+    color: #fff;
+}
+
+.darkmode .flavorList {
+    background-color: #141414;
+    color: #fff;
+}
+
+.darkmode .projectsList {
+    background-color: #141414;
+    color: #fff;
+}
+
+.darkmode .language svg {
+    background-color: #141414;
+    color: #fff;
+    border-radius: .5rem;
+}
+
+.darkmode .language svg:hover {
+    background-color: var(--flavorColor);
+    color: white;
+    border-radius: .5rem;
+}
+
+.darkmode .optionsList {
+    background-color: #141414;
+    color: #fff;
+}
+
+.darkmode .updownButton {
+    background-color: #383838;
+    color: #fff;
+    &:hover {
+        background-color: var(--flavorColor);
+        color: white;
+    }
+}
+
+.darkmode .coverText button:hover {
+    color: #000;
+}
+
+.darkmode .sideOptionsButtons {
+    background-color: #383838;
+    color: #fff;
+    &:hover {
+        background-color: var(--flavorColor);
+        color: white;
+    }
+}
+
+.darkmode .testimonial1 p,
+.darkmode .testimonial2 p,
+.darkmode .testimonial3 p {
+    background-color: #141414;
+    color: #fff;
+}
+
+.footerDarkmode {
+    background-color: #161616ff;
+    color: #fff;
+}
+.darkmode .allProjectsItem {
+    background-color: #141414;
+    color: #fff;
+}
+.darkmode .allProjectsItem button {
+    color: white;
+    &:hover {
+        background-color: var(--flavorColor);
+        color: white;
+    }
+}
+.darkmode .prevImgButton, .darkmode .nextImgButton {
+    background-color: #141414;
+    color: #fff;
+    &:hover {
+        background-color: var(--flavorColor);
+        color: white;
+    }
+}

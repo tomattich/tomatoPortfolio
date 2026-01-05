@@ -1,0 +1,42 @@
+/* =========================================
+   MAIN ENTRY POINT
+   Imports and initializes all components
+   ========================================= */
+
+import { header } from './components/header.js';
+import { mainPage, globalButtons } from './components/main.js';
+import { renderCover } from './components/cover.js';
+import { renderSkills } from './components/skills.js';
+import { mainSoftSkills } from './components/mainSoftSkills.js';
+import { Projects, fetchProjects } from './components/projects.js';
+import { testimonials } from './components/testimonials.js';
+import { footer } from './components/footer.js';
+
+// Wait for DOM to be fully loaded
+
+document.addEventListener("DOMContentLoaded", async () => {
+    
+    // Load dark mode preference from localStorage
+    
+    const mode = localStorage.getItem("mode") || "light";
+    if (mode === "dark") {
+        document.body.classList.add("darkmode");
+        const footer = document.querySelector("footer");
+        if (footer) footer.classList.add("footerDarkmode");
+    }
+
+    // Initialize all page components
+    
+    header();
+    mainPage();
+    renderCover();
+    renderSkills();
+    globalButtons();
+    mainSoftSkills();
+    // Fetch projects data before initializing Projects component
+    
+    await fetchProjects();
+    Projects();
+    testimonials();
+    footer();
+});

@@ -1,0 +1,174 @@
+/* =========================================
+   REUSABLE COMPONENTS
+   Buttons, Lines, Lists, Floating Elements
+   ========================================= */
+
+/* Buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem 1rem;
+    font-weight: bold;  
+    background-color: transparent;
+    border: .15rem solid var(--flavorColor);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.buttons:hover {
+    background-color: var(--flavorColor);
+    color: white;
+}
+
+/* Lines */
+.line {
+    border: none;
+    border-left: .15em solid var(--flavorColor);
+    height: 3rem;
+    font-weight: bold;
+}
+
+/* Lists */
+ul {
+    position: relative;
+    color: var(--flavorColor);
+    list-style: inside;
+    left: .5rem;
+}
+
+ul li {
+    position: relative;
+    right: .7rem;
+    zoom: .8;
+    font-weight: bold;
+}
+
+.flavorList {
+    display: none;
+    flex-direction: column;
+    background-color: #e9e9e9;
+    border-radius: .5rem;
+    padding: 1rem;
+    gap: 1rem;
+    position: absolute;
+    position-anchor: --flavorButton;
+    position-area: bottom;
+    top: .5rem;
+    animation: renderRight .3s ease-in-out;
+    z-index: 1;
+}
+
+.flavorList button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    zoom: 1.5;
+}
+
+.flavorList button:hover {
+    color: var(--flavorColor);
+}
+
+.optionsList {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #e9e9e9;
+    border-radius: .5rem;
+    padding: 1rem;
+    gap: 1rem;
+    top: 5rem;
+    right: 1rem;
+    animation: renderRight .3s ease-in-out;
+    z-index: 1;
+}
+
+.optionsList button {
+    cursor: pointer;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    zoom: 1.5;
+}
+
+.optionsList button:hover {
+    color: var(--flavorColor);
+}
+
+.lightdarkmodeButton {
+    animation: renderDown 1s ease-in-out;
+}
+
+.flavorButton {
+    animation: renderUp 1s ease-in-out;
+    anchor-name: --flavorButton;
+}
+
+/* Floating Elements */
+.updownButton {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 100;
+    background-color: #b8b8b8;
+    color: #161616ff;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.updownButton:hover {
+    background-color: var(--flavorColor);
+    color: #161616ff;
+}
+
+.sideOptionsButtons {
+    display: none;
+    position: fixed;
+    bottom: 5rem;
+    anchor-name: --sideOptionsButton;
+    right: 1.5rem;
+    z-index: 100;
+    background-color: #b8b8b8;;
+    color: #161616ff;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.sideOptionsButtons:hover {
+    background-color: var(--flavorColor);
+    color: #161616ff;
+}
+
+.sideOptionsList {
+    position: fixed;
+    position-anchor: --sideOptionsButton;
+    position-area: left;
+    top: 0;
+}
+
+.sideProjectsList {
+    display: none;
+    position: fixed;
+    position-anchor: --sideOptionsButton;
+    position-area: left;
+}
