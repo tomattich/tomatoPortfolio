@@ -320,19 +320,19 @@
     fill: none;
     stroke: var(--flavorColor);
     stroke-width: .1rem;
-    stroke-dashoffset: 475;
-    animation: progressAnimation 3s linear forwards;
+    stroke-dashoffset: 1000;
+    animation: progressAnimation 4s ease-in-out forwards;
 }
 .circularProgress1 circle {
     stroke-dasharray: 452;
     filter: hue-rotate(180deg);
 }
 .circularProgress2 circle {
-    stroke-dasharray: 350;
+    stroke-dasharray: 318.25;
     filter: hue-rotate(120deg);
 }
 .circularProgress3 circle {
-    stroke-dasharray: 250;
+    stroke-dasharray: 237.5;
     filter: hue-rotate(240deg);
 }
 .circularProgress1 svg , .circularProgress2 svg , .circularProgress3 svg {
