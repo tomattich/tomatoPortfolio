@@ -75,7 +75,8 @@ export function header() {
     const summary = document.querySelector(".summary");
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
     const allProjects = document.querySelector(".allProjects");
-    const softSkills = document.querySelector(".softSkills");
+    const softSkillsButton = document.querySelector(".SoftSkillsButton");
+    const optionsListSoftSkillsButton = document.querySelector(".optionsListSoftSkillsButton")
     const projectsPage = document.querySelector(".projectsPage");
     const testimonials = document.querySelector(".testimonials");
     const flavorList = document.querySelector(".flavorList");
@@ -167,12 +168,26 @@ export function header() {
             behavior: "smooth"
         });
     });
-
+    // scroll to soft skills list button 
+    optionsListSoftSkillsButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: cover.offsetHeight + summary.offsetHeight,
+            behavior: "smooth"
+        });
+    });
     // Scroll to contacts list button
 
     optionsListContactsButton.addEventListener("click", () => {
         window.scrollTo({
             top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight + testimonials.offsetHeight,
+            behavior: "smooth"
+        });
+    });
+    // Scroll to soft skills button
+    
+    softSkillsButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: cover.offsetHeight + summary.offsetHeight,
             behavior: "smooth"
         });
     });
