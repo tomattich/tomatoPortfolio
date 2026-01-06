@@ -15,6 +15,13 @@ header {
     align-items: center;
     padding: 2rem;
 }
+
+@media (orientation: portrait) and (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+}
+
 .mainPageButton {
     font-size: 1rem;
 }
@@ -40,7 +47,7 @@ header button {
 /* Navigation */
 nav {
     display: flex;
-    gap: 4rem;
+    gap: 1.5rem;
 }
 
 nav .hrline {
@@ -54,7 +61,6 @@ nav .hrline {
 }
 
 nav button {
-    zoom: 1;
     text-decoration: none;
     color: #000;
     font-weight: bold;
