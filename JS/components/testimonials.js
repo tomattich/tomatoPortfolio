@@ -19,20 +19,20 @@ export function testimonials() {
                     </svg>
                 </button>
                 <div class="testimonial1">
-                    <img src="/assets/testimonials/testimonial1.png" alt="">
+                    <img src="assets/testimonials/testimonial1.png" alt="">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, vero quo vel voluptate tempora tempore obcaecati laboriosam rem aspernatur cum necessitatibus libero similique mollitia nihil aliquid magnam quibusdam? Voluptates, eos?
                     Accusamus ipsum esse neque consequatur voluptatem. Cupiditate ullam, quis, nihil ab fuga veniam repellat eligendi ut earum eos facere quam provident error eius et itaque amet facilis labore ipsa. Facilis?
                     Illo quia numquam iste minus ipsam impedit, itaque amet fugit aspernatur incidunt consequatur quo, reprehenderit eum nostrum molestiae mollitia enim inventore iure rem labore qui odio consequuntur. Voluptatibus, esse dolorum.
                     Est, quis. Fugit, eveniet? Voluptas nesciunt, cum cupiditate voluptatum ex quae consectetur, suscipit libero est delectus quo sint blanditiis at aperiam aut rem perferendis minus veniam.</p>
                 </div>
                 <div class="testimonial2">
-                    <img src="/assets/testimonials/testimonial2.png" alt="">
+                    <img src="assets/testimonials/testimonial2.png" alt="">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi asperiores temporibus dolore a velit vitae natus magnam. Adipisci, quos aliquid. Quas blanditiis minima error voluptates quam ad adipisci expedita!
                     Recusandae, qui eligendi. Doloremque, pariatur. Minima eaque omnis amet. Dolorum, fugiat maiores. Dicta sequi cum dolorem. Neque debitis consequatur enim sunt sapiente voluptates fugiat distinctio possimus magni, assumenda veniam voluptatem?
                     Nihil obcaecati fuga necessitatibus praesentium, rem repellendus officia sapiente a asperiores. Non</p>
                 </div>
                 <div class="testimonial3">
-                    <img src="/assets/testimonials/testimonial3.png" alt="">
+                    <img src="assets/testimonials/testimonial3.png" alt="">
                     <p>I saw that earlier and if that happens genuinely it will put the nail of the coffin for that game
 Even after the release the hype would die off
 But than again there is silk song and it showed than an anticipated game will bounce off of hype death

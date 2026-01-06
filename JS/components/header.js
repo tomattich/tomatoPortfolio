@@ -11,7 +11,7 @@ export function header() {
 
     header.innerHTML = `
         <div class="devName">
-            <button class="mainPageButton">Mr<span><img src="/assets/logo.png" alt=""></span>Tomato</button>
+            <button class="mainPageButton">Mr<span><img src="assets/logo.png" alt=""></span>Tomato</button>
         </div>
         <nav>
             <div class="navButtons">
