@@ -19,6 +19,10 @@ export function header() {
                 <hr class= "hrline">
             </div>
             <div class="navButtons">
+                <button class="SoftSkillsButton">Soft Skills</button>
+                <hr class= "hrline">
+            </div>
+            <div class="navButtons">
                 <button class="ProjectsButton">Projects</button>
                 <hr class= "hrline">
             </div>
@@ -48,6 +52,7 @@ export function header() {
         <div class="optionsList">
             <button class="optionsListAboutButton">About</button>
             <button class="optionsListProjectsButton">Projects</button>
+            <button class="optionsListSoftSkillsButton">Soft Skills</button>
             <button class="optionsListTestimonialsButton">Testimonials</button>
             <button class="optionsListContactsButton">Contacts</button>
         </div>
@@ -70,6 +75,7 @@ export function header() {
     const summary = document.querySelector(".summary");
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
     const allProjects = document.querySelector(".allProjects");
+    const softSkills = document.querySelector(".softSkills");
     const projectsPage = document.querySelector(".projectsPage");
     const testimonials = document.querySelector(".testimonials");
     const flavorList = document.querySelector(".flavorList");

@@ -67,6 +67,7 @@ export function mainPage() {
     </button>
     <div class="optionsList sideOptionsList">
         <button class="sideOptionsListAboutButton">About</button>
+        <button class="sideOptionsListSoftSkillsButton">Soft Skills</button>
         <button class="sideOptionsListProjectsButton">Projects</button>
         <button class="sideOptionsListTestimonialsButton">Testimonials</button>
         <button class="sideOptionsListContactsButton">Contacts</button>
@@ -88,9 +89,11 @@ export function globalButtons() {
     const summary = document.querySelector(".summary");
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
     const allProjects = document.querySelector(".allProjects");
+    const softSkills = document.querySelector(".softSkills");
     const projectsPage = document.querySelector(".projectsPage");
     const testimonials = document.querySelector(".testimonials");
     const sideOptionsListAboutButton = document.querySelector(".sideOptionsListAboutButton");
+    const sideOptionsListSoftSkillsButton = document.querySelector(".sideOptionsListSoftSkillsButton");
     const sideOptionsListProjectsButton = document.querySelector(".sideOptionsListProjectsButton");
     const sideOptionsListTestimonialsButton = document.querySelector(".sideOptionsListTestimonialsButton");
     const sideOptionsListContactsButton = document.querySelector(".sideOptionsListContactsButton");
@@ -191,6 +194,15 @@ export function globalButtons() {
     allProjectsButton.addEventListener("click", () => {
         window.scrollTo({
             top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight,
+            behavior: "smooth"
+        });
+    });
+
+    // sideOptionsSoftSkillsButton
+
+    sideOptionsListSoftSkillsButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: cover.offsetHeight + summary.offsetHeight,
             behavior: "smooth"
         });
     });
