@@ -3,14 +3,14 @@
    Imports and initializes all components
    ========================================= */
 
-import { header } from './components/header.js';
-import { mainPage, globalButtons } from './components/main.js';
-import { renderCover } from './components/cover.js';
-import { renderSkills } from './components/skills.js';
-import { mainSoftSkills } from './components/mainSoftSkills.js';
-import { Projects, fetchProjects } from './components/projects.js';
-import { testimonials } from './components/testimonials.js';
-import { footer } from './components/footer.js';
+import { header } from './JS/components/header.js';
+import { mainPage, globalButtons } from './JS/components/main.js';
+import { renderCover } from './JS/components/cover.js';
+import { renderSkills } from './JS/components/skills.js';
+import { mainSoftSkills } from './JS/components/mainSoftSkills.js';
+import { Projects, fetchProjects } from './JS/components/projects.js';
+import { testimonials } from './JS/components/testimonials.js';
+import { footer } from './JS/components/footer.js';
 
 // Wait for DOM to be fully loaded
 
