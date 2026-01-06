@@ -20,6 +20,7 @@
         flex-direction: column;
         height: 100dvh;
         gap: 6rem;
+        margin-top: 5rem;
     }
 }
 

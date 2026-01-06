@@ -31,7 +31,11 @@ body {
     grid-template-rows: auto;
     overflow-x: hidden;
 }
-
+@media (orientation: portrait) and (max-width: 768px) {
+    body {
+        zoom: .8;
+    }
+}
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: .2rem;
