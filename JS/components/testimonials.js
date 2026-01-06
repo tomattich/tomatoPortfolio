@@ -33,13 +33,9 @@ export function testimonials() {
                 </div>
                 <div class="testimonial3">
                     <img src="assets/testimonials/testimonial3.png" alt="">
-                    <p>I saw that earlier and if that happens genuinely it will put the nail of the coffin for that game
-Even after the release the hype would die off
-But than again there is silk song and it showed than an anticipated game will bounce off of hype death
-Soooo
-Just thought about it uncle granpa will rape pennywise if he ever in counters it
-            On a side note do you'll think the reason you wake up from dreams is because you died in them no matter the context of the dream like sometimes I wake up from a dream where I was having a conversation or doing something and the first thought that comes to my mind is I died ...how
-Like if I am in a dream where am being chased by something or being brutally killed that thought don't come but when I wake up from a dream where there isn't something actively trying to kill me I wonder how I died</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi asperiores temporibus dolore a velit vitae natus magnam. Adipisci, quos aliquid. Quas blanditiis minima error voluptates quam ad adipisci expedita!
+                    Recusandae, qui eligendi. Doloremque, pariatur. Minima eaque omnis amet. Dolorum, fugiat maiores. Dicta sequi cum dolorem. Neque debitis consequatur enim sunt sapiente voluptates fugiat distinctio possimus magni, assumenda veniam voluptatem?
+                    Nihil obcaecati fuga necessitatibus praesentium, rem repellendus officia sapiente a asperiores. Non</p>
                 </div>
                 `
     }
