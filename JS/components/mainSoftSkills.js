@@ -11,46 +11,92 @@ export function mainSoftSkills() {
                 <li></li>
             </ul>
         <div class="mainSoftSkillsContainer">
-            <div class="skill1">
-                <p>TeamWork <span>!</span></p>
-                <div class="circularProgress1 bar1">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number n1">
+            <div class="softSkillsContainer">
+                <div class="skill1">
+                    <p>TeamWork <span>!</span></p>
+                    <div class="circularProgress1 bar1">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n1">
+                                </div>
                             </div>
                         </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
+                </div>
+                <div class="skill2">
+                    <p>Communication <span>!</span></p>
+                    <div class="circularProgress2 bar2">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n2">
+                                </div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="skill3">
+                    <p>Problem Solving <span>!</span></p>
+                    <div class="circularProgress3 bar3">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n3">
+                                </div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <div class="skill2">
-                <div class="circularProgress2 bar2">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number n2">
+            <div class="softSkillsContainer">
+                <div class="skill1">
+                    <div class="circularProgress1 bar1">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n1">
+                                </div>
                             </div>
                         </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
+                    <p>TeamWork <span>!</span></p>
                 </div>
-                <p>Communication <span>!</span></p>
-            </div>
-            <div class="skill3">
-                <p>Problem Solving <span>!</span></p>
-                <div class="circularProgress3 bar3">
-                    <div class="outer">
-                        <div class="inner">
-                            <div class="number n3">
+                <div class="skill2">
+                    <div class="circularProgress2 bar2">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n2">
+                                </div>
                             </div>
                         </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
+                    <p>Communication <span>!</span></p>
+                </div>
+                <div class="skill3">
+                    <div class="circularProgress3 bar3">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n3">
+                                </div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <p>Problem Solving <span>!</span></p>
                 </div>
             </div>
         </div>

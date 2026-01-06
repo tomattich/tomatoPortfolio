@@ -290,9 +290,10 @@
 
 .mainSoftSkillsContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* each soft skill */
@@ -300,16 +301,22 @@
 .skill1, .skill2, .skill3 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    width: fit-content;
     border-radius: .8rem;
+    width: 30rem;
+}
+@media (orientation: portrait) and (max-width: 768px) {
+    .skill1, .skill2, .skill3 {
+       flex-direction: column;
+       width: fit-content;
+       align-self: center;
+    }
 }
 
 .skill1 p, .skill2 p, .skill3 p {
     font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .skill1 span{
@@ -354,6 +361,24 @@
 .number {
     font-weight: lighter;
     font-size: 1.5rem;
+}
+
+.n1 {
+    font-weight: bold;
+    color: var(--flavorColor);
+    filter: hue-rotate(180deg);
+}
+
+.n2 {
+    font-weight: bold;
+    color: var(--flavorColor);
+    filter: hue-rotate(120deg);
+}
+
+.n3 {
+    font-weight: bold;
+    color: var(--flavorColor);
+    filter: hue-rotate(240deg);
 }
 
 .circularProgress1 circle , .circularProgress2 circle , .circularProgress3 circle {

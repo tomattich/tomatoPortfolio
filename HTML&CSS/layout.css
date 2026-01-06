@@ -15,7 +15,9 @@ header {
     align-items: center;
     padding: 2rem;
 }
-
+.mainPageButton {
+    font-size: 1rem;
+}
 
 header span img {
     width: .5rem;
@@ -32,7 +34,7 @@ header button {
     color: #000;
     font-weight: bold;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    zoom: 1.2;
+    zoom: 1;
 }
 
 /* Navigation */
