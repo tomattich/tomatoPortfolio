@@ -292,31 +292,44 @@
 .mainSoftSkillsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
+/* soft skills container */
+
+.softSkillsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
 /* each soft skill */
 
-.skill1, .skill2, .skill3 {
+.skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     gap: 1rem;
     border-radius: .8rem;
     width: 30rem;
 }
+.skill4, .skill5, .skill6 {
+    justify-content: flex-start;
+}
 @media (orientation: portrait) and (max-width: 768px) {
-    .skill1, .skill2, .skill3 {
+    .skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
        flex-direction: column;
        width: fit-content;
        align-self: center;
     }
 }
 
-.skill1 p, .skill2 p, .skill3 p {
+.skill1 p, .skill2 p, .skill3 p, .skill4 p, .skill5 p, .skill6 p {
     font-size: 1.5rem;
 }
 
@@ -332,25 +345,41 @@
 
 .skill3 span{
     color: var(--flavorColor);
-    filter: hue-rotate(240deg);
+    filter: hue-rotate(260deg);
 }
+
+.skill4 span{
+    color: var(--flavorColor);
+    filter: hue-rotate(280deg);
+}
+
+.skill5 span{
+    color: var(--flavorColor);
+    filter: hue-rotate(320deg);
+}
+
+.skill6 span{
+    color: var(--flavorColor);
+    filter: hue-rotate(380deg);
+}
+
 
 /* Circular Progress Bar */
 
-.circularProgress1 , .circularProgress2 , .circularProgress3 {
+.circularProgress1 , .circularProgress2 , .circularProgress3 , .circularProgress4 , .circularProgress5 , .circularProgress6 {
     position: relative;
     height: 10rem;
     width: 10rem;
 }
 
-.circularProgress1 .outer , .circularProgress2 .outer , .circularProgress3 .outer {
+.circularProgress1 .outer , .circularProgress2 .outer , .circularProgress3 .outer , .circularProgress4 .outer , .circularProgress5 .outer , .circularProgress6 .outer {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
     padding: 1.25rem;
 }
 
-.circularProgress1 .inner , .circularProgress2 .inner , .circularProgress3 .inner {
+.circularProgress1 .inner , .circularProgress2 .inner , .circularProgress3 .inner , .circularProgress4 .inner , .circularProgress5 .inner , .circularProgress6 .inner {
     height: 7.5rem;
     width: 7.5rem;
     border-radius: 50%;
@@ -379,10 +408,28 @@
 .n3 {
     font-weight: bold;
     color: var(--flavorColor);
-    filter: hue-rotate(240deg);
+    filter: hue-rotate(260deg);
 }
 
-.circularProgress1 circle , .circularProgress2 circle , .circularProgress3 circle {
+.n4 {
+    font-weight: bold;
+    color: var(--flavorColor);
+    filter: hue-rotate(280deg);
+}
+
+.n5 {
+    font-weight: bold;
+    color: var(--flavorColor);
+    filter: hue-rotate(320deg);
+}
+
+.n6 {
+    font-weight: bold;
+    color: var(--flavorColor);
+    filter: hue-rotate(380deg);
+}
+
+.circularProgress1 circle , .circularProgress2 circle , .circularProgress3 circle , .circularProgress4 circle , .circularProgress5 circle , .circularProgress6 circle {
     fill: none;
     stroke: var(--flavorColor);
     stroke-width: .1rem;
@@ -392,21 +439,36 @@
 }
 
 .circularProgress1 circle {
-    stroke-dasharray: 452;
+    stroke-dasharray: 447.48;
     filter: hue-rotate(180deg);
 }
 
 .circularProgress2 circle {
-    stroke-dasharray: 318.25;
+    stroke-dasharray: 406.8;
     filter: hue-rotate(120deg);
 }
 
 .circularProgress3 circle {
-    stroke-dasharray: 237.5;
-    filter: hue-rotate(240deg);
+    stroke-dasharray:  384.2;
+    filter: hue-rotate(260deg);
 }
 
-.circularProgress1 svg , .circularProgress2 svg , .circularProgress3 svg {
+.circularProgress4 circle {
+    stroke-dasharray: 339;
+    filter: hue-rotate(280deg);
+}
+
+.circularProgress5 circle {
+    stroke-dasharray: 361.6;
+    filter: hue-rotate(320deg);
+}
+
+.circularProgress6 circle {
+    stroke-dasharray: 361.6;
+    filter: hue-rotate(380deg);
+}
+
+.circularProgress1 svg , .circularProgress2 svg , .circularProgress3 svg , .circularProgress4 svg , .circularProgress5 svg , .circularProgress6 svg {
     position: absolute;
     top: 0;
     left: 0;
@@ -805,12 +867,6 @@
     gap: 1rem;
 }
 
-@media (orientation: portrait) and (max-width: 768px) {
-    .testimonialsContainer {
-        width: 70dvw;
-    }
-}
-
 .testimonialsButtonLeft, .testimonialsButtonRight {
     position: absolute;
     position-anchor: --testimonialsContainer;
@@ -871,7 +927,6 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .testimonial1, .testimonial2, .testimonial3 {
-        width: 70dvw;
         p {
             font-size: .8rem;
         }
