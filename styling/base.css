@@ -33,7 +33,7 @@ body {
 }
 @media (orientation: portrait) and (max-width: 768px) {
     body {
-        zoom: .8;
+        zoom: .65;
     }
 }
 /* Scrollbar Styles */
