@@ -255,7 +255,7 @@ export function header() {
             </svg>`;
             localStorage.setItem("mode", "light");
         }
-    });
+    }); 
 
     // Toggle theme color picker right side
 
