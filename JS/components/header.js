@@ -19,7 +19,7 @@ export function header() {
                 <hr class= "hrline">
             </div>
             <div class="navButtons">
-                <button class="SoftSkillsButton">Soft Skills</button>
+                <button class="SoftSkillsButton">Skills</button>
                 <hr class= "hrline">
             </div>
             <div class="navButtons">

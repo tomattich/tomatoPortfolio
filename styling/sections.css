@@ -170,6 +170,7 @@
     gap: 5rem;
     min-height: 100dvh;
     content-visibility: auto;
+    align-items: center;
     contain-intrinsic-size: 100dvh;
     animation: reveal linear both ;
     animation-timeline: view();
@@ -196,7 +197,6 @@
 }
 
 .skills p {
-    font-size: 1.5rem;
     padding-left: 1rem;
     border-left: .15em solid var(--flavorColor);
     font-weight: bold;
@@ -205,7 +205,7 @@
     margin-bottom: 1rem;
 }
 .skills .skillsDetails {
-    font-size: 1rem;
+
     padding-top: .5rem;
     padding-left: 1.9rem;
     border-left: .2em solid var(--flavorColor);
@@ -235,7 +235,8 @@
     flex-wrap: wrap;
     animation: renderRight 1s ease-in-out;
     gap: 1rem;
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
     width: 80%;
     justify-self: center;
 }
@@ -266,6 +267,8 @@
     flex-direction: column;
     text-align: center;
     width: min-content;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 

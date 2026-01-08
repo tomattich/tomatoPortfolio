@@ -1,16 +1,114 @@
 export function mainSoftSkills() {
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
+
     mainSoftSkills.innerHTML = `
-        <h1>Soft Skills</h1>
+        <div class="mainSoftSkillsChange">
+            <button class="buttons mainSoftSkillsChanger1"><svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"></path></g></svg></button>
+            <h1 class="mainSoftSkillsTitle">Soft Skills</h1>
+            <button class="buttons mainSoftSkillsChanger2"><svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></g></svg></button>
+        </div>
         <hr class="line" />
         <ul>
             <li></li>
         </ul>
         <hr class="line" />
-            <ul>
-                <li></li>
-            </ul>
+        <ul>
+            <li></li>
+        </ul>
         <div class="mainSoftSkillsContainer">
+        </div>
+    `;
+
+    const mainSoftSkillsChanger1 = document.querySelector(".mainSoftSkillsChanger1")
+    const mainSoftSkillsChanger2 = document.querySelector(".mainSoftSkillsChanger2")
+    const mainSoftSkillsTitle = document.querySelector(".mainSoftSkillsTitle");
+    const mainSoftSkillsContainer = document.querySelector(".mainSoftSkillsContainer");
+    
+    let number1;
+    let number2;
+    let number3;
+    let number4;
+    let number5;
+    let number6;
+
+    function calcNumber(number, percentage) {
+        let i = 0;
+        const interval = setInterval(() => {
+            i++;
+            number.textContent = i + "%";
+
+            if (i === percentage) {
+                clearInterval(interval);
+            }
+        }, 30);
+    }
+    
+    function changeTitle() {
+        if (mainSoftSkillsTitle.innerHTML === "Soft Skills") {
+            mainSoftSkillsTitle.innerHTML = "Hard Skills";
+            mainSoftSkillsContainer.innerHTML = `
+            <div class="hardSkillsContainer">
+                <div class="hardSkills1">
+                    <p>HTML</p>
+                    <div class="circularProgress1 bar1">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n1">
+                                </div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="hardSkills2">
+                    <p>JavaScript</p>
+                    <div class="circularProgress2 bar2">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n2">
+                                </div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="hardSkills3">
+                    <p>CSS</p>
+                    <div class="circularProgress3 bar3">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number n3">
+                                </div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            `;
+            number1 = document.querySelector(".n1");
+            number2 = document.querySelector(".n2");
+            number3 = document.querySelector(".n3");
+            calcNumber(number1, 95);
+            calcNumber(number2, 90);
+            calcNumber(number3, 85);
+            mainSoftSkillsTitle.style.animation = "reveal .3s ease-in-out";
+            setTimeout(() => {
+                mainSoftSkillsTitle.style.animation = "none";
+            }, 300);
+        } else if (mainSoftSkillsTitle.innerHTML === "Hard Skills") {
+            mainSoftSkillsTitle.innerHTML = "Soft Skills";
+            mainSoftSkillsTitle.style.animation = "reveal .3s ease-in-out";
+            setTimeout(() => {
+                mainSoftSkillsTitle.style.animation = "none";
+            }, 300);
+            mainSoftSkillsContainer.innerHTML = `
             <div class="softSkillsContainer">
                 <div class="skill1">
                     <p>TeamWork <span>!</span></p>
@@ -98,79 +196,24 @@ export function mainSoftSkills() {
                     </div>
                     <p>Decision Making <span>!</span></p>
                 </div>
-            </div>
-        </div>
-    `;
-    const number1 = document.querySelector(".n1");
-    const number2 = document.querySelector(".n2");
-    const number3 = document.querySelector(".n3");
-    const number4 = document.querySelector(".n4");
-    const number5 = document.querySelector(".n5");
-    const number6 = document.querySelector(".n6");
-    function calcNumber() {
-        let i = 0;
-        const interval = setInterval(() => {
-            i++;
-            number1.textContent = i + "%";
-            if (i === 99) {
-                clearInterval(interval);
-            }
-        }, 30);
+            </div>`;
+
+            number1 = document.querySelector(".n1");
+            number2 = document.querySelector(".n2");
+            number3 = document.querySelector(".n3");
+            number4 = document.querySelector(".n4");
+            number5 = document.querySelector(".n5");
+            number6 = document.querySelector(".n6");
+
+            calcNumber(number1, 99);
+            calcNumber(number2, 90);
+            calcNumber(number3, 85);
+            calcNumber(number4, 75);
+            calcNumber(number5, 80);
+            calcNumber(number6, 80);
+        }
     }
-    function calcNumber2() {
-        let i = 0;
-        const interval2 = setInterval(() => {
-            i++;
-            number2.textContent = i + "%";
-            if (i === 90) {
-                clearInterval(interval2);
-            }
-        }, 30);
-    }
-    function calcNumber3() {
-        let i = 0;
-        const interval3 = setInterval(() => {
-            i++;
-            number3.textContent = i + "%";
-            if (i === 85) {
-                clearInterval(interval3);
-            }
-        }, 30);
-    }
-    function calcNumber4() {
-        let i = 0;
-        const interval4 = setInterval(() => {
-            i++;
-            number4.textContent = i + "%";
-            if (i === 75) {
-                clearInterval(interval4);
-            }
-        }, 30);
-    }
-    function calcNumber5() {
-        let i = 0;
-        const interval5 = setInterval(() => {
-            i++;
-            number5.textContent = i + "%";
-            if (i === 80) {
-                clearInterval(interval5);
-            }
-        }, 30);
-    }
-    function calcNumber6() {
-        let i = 0;
-        const interval6 = setInterval(() => {
-            i++;
-            number6.textContent = i + "%";
-            if (i === 80) {
-                clearInterval(interval6);
-            }
-        }, 30);
-    }
-    calcNumber();
-    calcNumber2();
-    calcNumber3();
-    calcNumber4();
-    calcNumber5();
-    calcNumber6();
+    changeTitle();
+    mainSoftSkillsChanger1.addEventListener("click", changeTitle);
+    mainSoftSkillsChanger2.addEventListener("click", changeTitle);
 }
