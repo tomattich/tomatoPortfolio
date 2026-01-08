@@ -299,11 +299,7 @@
     flex-wrap: wrap;
 }
 
-@media (orientation: portrait) and (max-width: 768px) {
-    .allProjectsContainer {
-        margin-top: 30rem;
-    }
-}
+
 
 .allProjectsContainer span {
     color: var(--flavorColor);

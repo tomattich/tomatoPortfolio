@@ -5,10 +5,9 @@
 .mainSoftSkills {
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    min-height: 100dvh;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
     animation: reveal linear both;
     animation-timeline: view();
     animation-range: entry 40% entry 60%;
@@ -26,8 +25,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    min-height: 40rem;
+    gap: 1rem;    
 }
 
 /* soft skills container */
