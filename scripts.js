@@ -10,6 +10,7 @@ import { renderSummary } from './JS/components/summary.js';
 import { mainSoftSkills } from './JS/components/mainSoftSkills.js';
 import { Projects, fetchProjects } from './JS/components/projects.js';
 import { testimonials } from './JS/components/testimonials.js';
+import { contact } from './JS/components/contact.js';
 import { footer } from './JS/components/footer.js';
 
 // Wait for DOM to be fully loaded
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     mainPage();
     header();
+    contact();
     renderCover();
     renderSummary();
     globalButtons();

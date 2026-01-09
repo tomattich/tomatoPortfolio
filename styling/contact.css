@@ -1,0 +1,117 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: renderRight 1s ease-in-out;
+    min-height: 100dvh;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 40% entry 60%;
+}
+
+.contact ul {
+    list-style: inside;
+    margin-left: 1rem;  
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.contactText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40rem;
+    gap: 1rem;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: var(--flavorColor) .1rem solid;
+    padding: 1rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contactForm input {
+    padding: 1rem;
+    border: var(--flavorColor) .1rem solid;
+    outline: var(--flavorColor);
+    background-color: transparent;
+    color: currentColor;
+    width: 100%;
+
+    &::placeholder {
+        color: var(--flavorColor);
+        opacity: .5;
+    }
+}
+
+.contactForm textarea {
+    padding: 1rem;
+    border: var(--flavorColor) .1rem solid;
+    outline: var(--flavorColor);
+    background-color: transparent;
+    color: currentColor;
+    width: 100%;
+    resize: none;
+    height: 10rem;
+    &::placeholder {
+        color: var(--flavorColor);
+        opacity: .5;
+    }
+}
+
+.contactForm button {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contactForm button:hover {
+    background-color: var(--flavorColor);
+    color: white;
+}
+
+.contact span {
+    color: var(--flavorColor);
+}
+
+.contact p {
+    font-size: 1.25rem;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 32dvw;
+    gap: 1rem;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .contactText {
+        width: 90%;
+    }
+    .contactForm {
+        width: 90%;
+    }
+    .contactDetails {
+        width: 100%;
+    }
+}
+
+.contactDetailPhoneNumber, .contactDetailEmail, .contactDetailAddress {
+    border: var(--flavorColor) .1rem solid;
+    padding: 1rem;
+    width: 100%;
+}
