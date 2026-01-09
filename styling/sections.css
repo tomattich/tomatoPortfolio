@@ -374,6 +374,12 @@
     border-radius: .5rem;
 }
 
+@media (orientation: portrait) and (max-width: 768px) {
+    .allProjectsItem {
+        zoom: .8;
+    }
+}
+
 .allProjectsItemGenres {
     display: flex;
     flex-direction: column;

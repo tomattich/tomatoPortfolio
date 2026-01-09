@@ -247,7 +247,7 @@ export function globalButtons() {
 
     sideOptionsListTestimonialsButton.addEventListener("click", () => {
         window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight,
+            top: cover.scrollHeight + summary.scrollHeight + mainSoftSkills.scrollHeight + allProjects.scrollHeight + projectsPage.scrollHeight,
             behavior: "smooth"
         });
     });

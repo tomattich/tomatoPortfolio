@@ -169,12 +169,14 @@ export function header() {
         });
     });
     // scroll to soft skills list button 
+
     optionsListSoftSkillsButton.addEventListener("click", () => {
         window.scrollTo({
             top: cover.offsetHeight + summary.offsetHeight,
             behavior: "smooth"
         });
     });
+
     // Scroll to contacts list button
 
     optionsListContactsButton.addEventListener("click", () => {
@@ -183,6 +185,7 @@ export function header() {
             behavior: "smooth"
         });
     });
+    
     // Scroll to soft skills button
     
     softSkillsButton.addEventListener("click", () => {
