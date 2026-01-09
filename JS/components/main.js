@@ -259,26 +259,5 @@ export function globalButtons() {
         });
     });
 
-    // Disable right-click
-
-  document.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-  });
-
-  // Disable specific keyboard shortcuts
-
-  document.addEventListener("keydown", (e) => {
-
-    // F12 key
-
-    if (e.keyCode === 123) {
-      e.preventDefault();
-    }
-
-    // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C
-
-    if ((e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) || (e.ctrlKey && e.keyCode === 85)) {
-      e.preventDefault();
-    }
-  });
+    
 }

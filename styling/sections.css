@@ -197,8 +197,8 @@
 }
 
 .skills p {
-    padding-left: 1rem;
-    border-left: .15em solid var(--flavorColor);
+    padding-left: 2rem;
+    border-left: .2em solid var(--flavorColor);
     font-weight: bold;
 }
 .skills h1 {

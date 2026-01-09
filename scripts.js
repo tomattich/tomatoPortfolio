@@ -6,7 +6,7 @@
 import { header } from './JS/components/header.js';
 import { mainPage, globalButtons } from './JS/components/main.js';
 import { renderCover } from './JS/components/cover.js';
-import { renderSkills } from './JS/components/skills.js';
+import { renderSummary } from './JS/components/summary.js';
 import { mainSoftSkills } from './JS/components/mainSoftSkills.js';
 import { Projects, fetchProjects } from './JS/components/projects.js';
 import { testimonials } from './JS/components/testimonials.js';
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     mainPage();
     header();
     renderCover();
-    renderSkills();
+    renderSummary();
     globalButtons();
     mainSoftSkills();
     // Fetch projects data before initializing Projects component
