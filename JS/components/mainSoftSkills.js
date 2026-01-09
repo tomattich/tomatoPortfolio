@@ -40,7 +40,7 @@ export function mainSoftSkills() {
             if (i === percentage) {
                 clearInterval(interval);
             }
-        }, 30);
+        }, 20);
     }
     
     function changeTitle() {
@@ -95,9 +95,9 @@ export function mainSoftSkills() {
             number1 = document.querySelector(".n1");
             number2 = document.querySelector(".n2");
             number3 = document.querySelector(".n3");
-            calcNumber(number1, 95);
-            calcNumber(number2, 90);
-            calcNumber(number3, 85);
+            calcNumber(number1, 99);
+            calcNumber(number2, 80);
+            calcNumber(number3, 99);
             mainSoftSkillsTitle.style.animation = "reveal .3s ease-in-out";
             setTimeout(() => {
                 mainSoftSkillsTitle.style.animation = "none";

@@ -85,6 +85,7 @@ export function mainPage() {
    ========================================= */
 
 export function globalButtons() {
+    
     const cover = document.querySelector(".cover");
     const summary = document.querySelector(".summary");
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
@@ -257,18 +258,25 @@ export function globalButtons() {
             behavior: "smooth"
         });
     });
+
     // Disable right-click
+
   document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
   });
 
   // Disable specific keyboard shortcuts
+
   document.addEventListener("keydown", (e) => {
+
     // F12 key
+
     if (e.keyCode === 123) {
       e.preventDefault();
     }
+
     // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C
+
     if ((e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) || (e.ctrlKey && e.keyCode === 85)) {
       e.preventDefault();
     }

@@ -167,8 +167,7 @@
     stroke-width: .1rem;
     stroke-dashoffset: 1000;
     animation: progressAnimation 2s forwards;
-    animation-timeline: view();
-    animation-range: entry 50%  entry 200%;
+
 }
 
 .circularProgress1 circle {
@@ -233,7 +232,7 @@
     align-items: center;
     gap: 1rem;
 }
-.hardSkills1, .hardSkills2, .hardSkills3, .hardSkills4, .hardSkills5, .hardSkills6 {
+.hardSkills1, .hardSkills2, .hardSkills3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -241,7 +240,18 @@
     gap: 1rem;
     border-radius: .8rem;
     width: 30rem;
+}
 
+.hardSkills1 circle  {
+    stroke-dasharray: 447.48;
+}
+
+.hardSkills2 circle {
+    stroke-dasharray:  384.2;
+}
+
+.hardSkills3 circle {
+    stroke-dasharray: 447.48;
 }
 
 @media (orientation: portrait) and (max-width: 768px) {
