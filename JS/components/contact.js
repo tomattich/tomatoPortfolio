@@ -31,11 +31,11 @@ export function contact() {
         </div>
         <form class="contactForm">
             <label for="name">Name</label>
-            <input class="contactInput" type="text">
+            <input class="contactInput" id="name" type="text" autocomplete="on">
             <label for="email">Email</label>
-            <input class="contactInput" type="email">
+            <input class="contactInput" id="email" type="email" autocomplete="on">
             <label for="message">Message</label>
-            <textarea class="contactInput" ></textarea>
+            <textarea class="contactInput" id="message"></textarea>
             <button class="buttons contactButton" type="submit">Send</button>
         </form>
     </div>

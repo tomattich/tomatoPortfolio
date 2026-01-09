@@ -412,7 +412,6 @@
     display: flex;
     min-height: 100dvh;
     margin-top: 12rem;
-    margin-bottom: 12rem;
     flex-direction: column;
     align-items: center;
     content-visibility: auto;
