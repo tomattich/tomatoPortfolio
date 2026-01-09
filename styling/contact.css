@@ -42,6 +42,7 @@
     align-items: flex-start;
     border: var(--flavorColor) .1rem solid;
     padding: 1rem;
+    width: 32dvw;
     justify-content: center;
     gap: 1rem;
 }
@@ -66,7 +67,7 @@
     outline: var(--flavorColor);
     background-color: transparent;
     color: currentColor;
-    width: 32dvw;
+    width: 100%;
     resize: none;
     height: 10rem;
     &::placeholder {
