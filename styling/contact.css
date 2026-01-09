@@ -118,6 +118,10 @@
 }
 
 .contactDetailPhoneNumber, .contactDetailEmail, .contactDetailAddress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
     border: var(--flavorColor) .1rem solid;
     padding: 1rem;
     width: 100%;
