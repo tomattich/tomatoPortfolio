@@ -1,4 +1,5 @@
 import { themes } from '../data/themes.js';
+import { scrollToSection } from './main.js';
 
 /* =========================================
    HEADER COMPONENT
@@ -70,8 +71,6 @@ export function header() {
             <button class="featuredProjectsButtons">Featured Projects</button>
         </div>
     `;
-
-    const cover = document.querySelector(".cover");
     const summary = document.querySelector(".summary");
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
     const allProjects = document.querySelector(".allProjects");
@@ -96,9 +95,10 @@ export function header() {
     const optionsListProjectsButton = document.querySelector(".optionsListProjectsButton");
     const optionsListTestimonialsButton = document.querySelector(".optionsListTestimonialsButton");
     const optionsListContactsButton = document.querySelector(".optionsListContactsButton");
-    
+    const contact = document.querySelector(".contact");
+
     // Projects list
-    
+
     projectsButton.addEventListener("click", (e) => {
         if (e.type === "click" && projectsList.style.display === "flex") {
             projectsList.style.animation = "unrenderRight .4s ease-in-out";
@@ -112,7 +112,7 @@ export function header() {
     });
 
     // Toggle mobile menu options list
-    
+
     optionsButton.addEventListener("click", () => {
         if (optionsList.style.display === "flex") {
             optionsList.style.animation = "unrenderRight .4s ease-in-out";
@@ -128,7 +128,7 @@ export function header() {
             optionsList.style.display = "flex";
         }
     });
-    
+
     // Close mobile menu when clicking outside
 
     document.addEventListener("click", (e) => {
@@ -143,102 +143,48 @@ export function header() {
     });
 
     // Scroll to options list buttons
-    
-    optionsListAboutButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+
+    optionsListAboutButton.addEventListener("click", () => scrollToSection(summary));
 
     // Scroll to projects list button
-    
-    optionsListProjectsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight,
-            behavior: "smooth"
-        });
-    });
-    
+
+    optionsListProjectsButton.addEventListener("click", () => scrollToSection(mainSoftSkills));
+
     // Scroll to testimonials list button
-    
-    optionsListTestimonialsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+
+    optionsListTestimonialsButton.addEventListener("click", () => scrollToSection(testimonials));
+
     // scroll to soft skills list button 
 
-    optionsListSoftSkillsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    optionsListSoftSkillsButton.addEventListener("click", () => scrollToSection(mainSoftSkills));
 
     // Scroll to contacts list button
 
-    optionsListContactsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight + testimonials.offsetHeight,
-            behavior: "smooth"
-        });
-    });
-    
+    optionsListContactsButton.addEventListener("click", () => scrollToSection(contact));
+
     // Scroll to soft skills button
-    
-    softSkillsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+
+    softSkillsButton.addEventListener("click", () => scrollToSection(mainSoftSkills));
 
     // Scroll to All projects button
 
-    allProjectsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    allProjectsButton.addEventListener("click", () => scrollToSection(allProjects));
 
     // Scroll to Featured projects button
-    
-    featuredProjectsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight,
-            behavior: "smooth"
-        });
-    });
-    
+
+    featuredProjectsButton.addEventListener("click", () => scrollToSection(projectsPage));
+
     // Scroll to About section
-    
-    aboutButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight,
-            behavior: "smooth"
-        });
-    });
-    
+
+    aboutButton.addEventListener("click", () => scrollToSection(summary));
+
     // Scroll to Testimonials section
-    
-    testimonialsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+
+    testimonialsButton.addEventListener("click", () => scrollToSection(testimonials));
 
     // Scroll to Contacts section
 
-    contactsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight + testimonials.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    contactsButton.addEventListener("click", () => scrollToSection(contact));
 
     // Toggle dark mode and update icon
 
@@ -258,7 +204,7 @@ export function header() {
             </svg>`;
             localStorage.setItem("mode", "light");
         }
-    }); 
+    });
 
     // Toggle theme color picker right side
 

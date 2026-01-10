@@ -53,6 +53,7 @@
     scroll-behavior: smooth;
     width: 70dvw;
     gap: 1rem;
+    
 }
 
 @media (orientation: portrait) and (max-width: 768px) {
@@ -97,10 +98,10 @@
 .testimonial1, .testimonial2, .testimonial3 {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
+    align-self: center;
+    justify-self: center;
     flex-shrink: 0;
     width: 70dvw;
-
 }
 
 @media (orientation: portrait) and (max-width: 768px) {

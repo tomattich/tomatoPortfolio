@@ -17,7 +17,7 @@ export function contact() {
             <div class="contactDetails">
                 <div class="contactDetailPhoneNumber">
                     <h4>PHONE</h4>
-                    <p><span>+</span>213 6 96 74 20 55</p>
+                    <p><span>+</span>213 6 96 74 20 21</p>
                 </div>
                 <div class="contactDetailEmail">
                     <h4>EMAIL</h4>
@@ -31,13 +31,82 @@ export function contact() {
         </div>
         <form class="contactForm">
             <label for="name">Name</label>
-            <input class="contactInput" id="name" type="text" autocomplete="on">
+            <div class="contactInputNamePopOut"><span>!</span>Please enter a valid name<span>!</span></div>
+            <input class="contactInput contactInputName" id="name" type="text" autocomplete="on">
             <label for="email">Email</label>
-            <input class="contactInput" id="email" type="email" autocomplete="on">
+            <div class="contactInputEmailPopOut"><span>!</span>Please enter a valid email<span>!</span></div>
+            <input class="contactInput contactInputEmail" id="email" autocomplete="on" >
             <label for="message">Message</label>
-            <textarea class="contactInput" id="message"></textarea>
+            <div class="contactInputMessagePopOut"><span>!</span>Please enter a valid message<span>!</span></div>
+            <textarea class="contactInput contactInputMessage" id="message"></textarea>
             <button class="buttons contactButton" type="submit">Send</button>
         </form>
     </div>
     `;
+
+    const contactForm = document.querySelector(".contactForm");
+    const contactInputName = document.querySelector(".contactInputName");
+    const contactInputEmail = document.querySelector(".contactInputEmail");
+    const contactInputMessage = document.querySelector(".contactInputMessage");
+    const contactInputNamePopOut = document.querySelector(".contactInputNamePopOut");
+    const contactInputEmailPopOut = document.querySelector(".contactInputEmailPopOut");
+    const contactInputMessagePopOut = document.querySelector(".contactInputMessagePopOut");
+
+/* =========================================
+   VALIDATION
+   ========================================= */
+
+    /* NAME VALIDATION */
+
+    const validateName = () => {
+        if (contactInputName.value.trim().length < 3) {
+            return false;
+        }
+        return true;
+    };
+
+    /* EMAIL VALIDATION */
+
+    const validateEmail = () => {
+        if (contactInputEmail.value.length <= 3 || !contactInputEmail.value.includes("@")) {
+            return false;
+        }
+        return true;
+    };
+
+    /* MESSAGE VALIDATION */
+
+    const validateMessage = () => {
+        if (contactInputMessage.value.trim() === "") {
+            return false;
+        }
+        return true;
+    };
+
+    /* SUBMIT VALIDATION */
+
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (!validateName()) {
+            contactInputNamePopOut.style.display = "flex";
+        }
+        if (!validateEmail()) {
+            contactInputEmailPopOut.style.display = "flex";
+        }
+        if (!validateMessage()) {
+            contactInputMessagePopOut.style.display = "flex";
+        }
+        if (validateName() && validateEmail() && validateMessage()) {
+            contactInputNamePopOut.style.display = "none";
+            contactInputEmailPopOut.style.display = "none";
+            contactInputMessagePopOut.style.display = "none";
+            alert("Message sent successfully");
+            contactInputName.value = "";
+            contactInputEmail.value = "";
+            contactInputMessage.value = "";
+        }
+
+    });
+
 }

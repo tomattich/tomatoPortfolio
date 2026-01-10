@@ -3,6 +3,30 @@
    Renders the main page content including hero, services, about, and testimonials
    ========================================= */
 
+export function scrollToSection(element) {
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth"
+        });
+    } else {
+        console.warn("Element not found for scrolling");
+    }
+}
+
+export function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+export function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+
 export function mainPage() {
     const main = document.querySelector("main");
     main.innerHTML = `
@@ -69,7 +93,7 @@ export function mainPage() {
     </button>
     <div class="optionsList sideOptionsList">
         <button class="sideOptionsListAboutButton">About</button>
-        <button class="sideOptionsListSoftSkillsButton">Soft Skills</button>
+        <button class="sideOptionsListSoftSkillsButton">Skills</button>
         <button class="sideOptionsListProjectsButton">Projects</button>
         <button class="sideOptionsListTestimonialsButton">Testimonials</button>
         <button class="sideOptionsListContactsButton">Contacts</button>
@@ -87,12 +111,11 @@ export function mainPage() {
    ========================================= */
 
 export function globalButtons() {
-    
+
     const cover = document.querySelector(".cover");
     const summary = document.querySelector(".summary");
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
     const allProjects = document.querySelector(".allProjects");
-    const softSkills = document.querySelector(".softSkills");
     const projectsPage = document.querySelector(".projectsPage");
     const testimonials = document.querySelector(".testimonials");
     const sideOptionsListAboutButton = document.querySelector(".sideOptionsListAboutButton");
@@ -106,6 +129,7 @@ export function globalButtons() {
     const sideProjectsList = document.querySelector(".sideProjectsList");
     const allProjectsButton = document.querySelector(".allProjectsButton");
     const featuredProjectsButton = document.querySelector(".featuredProjectsButton");
+    const contact = document.querySelector(".contact");
 
     // Show/hide side navigation based on scroll position
 
@@ -161,15 +185,9 @@ export function globalButtons() {
 
     updownButton.addEventListener("click", () => {
         if (window.scrollY > window.innerHeight * 2) {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            scrollToTop();
         } else {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: "smooth"
-            });
+            scrollToBottom();
         }
     });
 
@@ -185,39 +203,19 @@ export function globalButtons() {
 
     //sideOptionsList Buttons
 
-    sideOptionsListAboutButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    sideOptionsListAboutButton.addEventListener("click", () => scrollToSection(summary));
 
     // sideOptionsAllProjectsButton
 
-    allProjectsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    allProjectsButton.addEventListener("click", () => scrollToSection(allProjects));
 
-    // sideOptionsSoftSkillsButton
+    // sideOptionsMainSoftSkillsButton
 
-    sideOptionsListSoftSkillsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    sideOptionsListSoftSkillsButton.addEventListener("click", () => scrollToSection(mainSoftSkills));
 
     // sideOptionsFeaturedProjectsButton
 
-    featuredProjectsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    featuredProjectsButton.addEventListener("click", () => scrollToSection(projectsPage));
 
     // sideProjectsList Buttons
 
@@ -245,21 +243,11 @@ export function globalButtons() {
 
     // sideOptionsListTestimonialsButton
 
-    sideOptionsListTestimonialsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.scrollHeight + summary.scrollHeight + mainSoftSkills.scrollHeight + allProjects.scrollHeight + projectsPage.scrollHeight,
-            behavior: "smooth"
-        });
-    });
+    sideOptionsListTestimonialsButton.addEventListener("click", () => scrollToSection(testimonials));
 
     // sideOptionsListContactsButton
 
-    sideOptionsListContactsButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: cover.offsetHeight + summary.offsetHeight + mainSoftSkills.offsetHeight + allProjects.offsetHeight + projectsPage.offsetHeight + testimonials.offsetHeight,
-            behavior: "smooth"
-        });
-    });
+    sideOptionsListContactsButton.addEventListener("click", () => scrollToSection(contact));
 
-    
+
 }
