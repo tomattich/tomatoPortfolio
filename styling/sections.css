@@ -61,6 +61,7 @@
     border-right: .15em solid var(--flavorColor);
     white-space: nowrap;
     width: fit-content;
+    overflow: hidden;
     animation: typing 2s steps(25, end), blink-caret 1s step-end infinite;
 }
 
