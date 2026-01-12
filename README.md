@@ -1,5 +1,7 @@
 ! IMPORTANT ! 
 
+THIS IS JUST A SCHOOL PROJECT
+
 I DO NOT HAVE ANY OF THOSE SKILLS IN THE COVER ANIMATION THING I JUST ADDED THEM TO FILL SPACE (i only know html, css and js) 
 
 LINK TO THE SITE : https://tomattich.github.io/tomatoPortfolio/
