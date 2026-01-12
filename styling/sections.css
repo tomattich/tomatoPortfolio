@@ -46,7 +46,7 @@
 
 .coverText :nth-child(3) {
     animation: renderUp 1s ease-in-out;
-}
+    }
 
 .coverText :nth-child(4) {
     animation: renderDown 1s ease-in-out;
@@ -61,7 +61,6 @@
     border-right: .15em solid var(--flavorColor);
     white-space: nowrap;
     width: fit-content;
-    text-shadow: 0 0 .5rem var(--flavorColor);
     animation: typing 2s steps(25, end), blink-caret 1s step-end infinite;
 }
 
@@ -74,6 +73,10 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+.coverButtons button:hover {
+    box-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .coverLanguages {
@@ -330,6 +333,25 @@
     zoom: .8;
 }
 
+.projectFilterOptions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.projectFilterOptions button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.projectFilterOptions button:hover, .projectFilterOptions button.active {
+    background-color: var(--flavorColor);
+    color: white;
+    box-shadow: 0 0 .5rem var(--flavorColor);
+}
+
 .allProjectsItemsContainer {
     display: flex;
     flex-direction: row;
@@ -382,7 +404,7 @@
 
 .allProjectsItem:hover {
     transition: all .3s ease-in-out;
-    transform: translateY(.5rem);
+    transform: translateY(-.5rem);
     box-shadow: 0 0 1rem var(--flavorColor);
 
 }
@@ -575,6 +597,10 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     justify-self: center;
+}
+
+.techList {    
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .viewProjectButton {

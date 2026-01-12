@@ -60,7 +60,7 @@ ul li {
     z-index: 1;
 }
 
-.flavorList button {
+.flavorButtons {
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -70,10 +70,10 @@ ul li {
     zoom: 1.5;
 }
 
-.flavorList button:hover {
+.flavorButtons:hover {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
-
 .optionsList {
     position: absolute;
     display: none;
@@ -97,9 +97,9 @@ ul li {
     transition: color 0.3s ease-in-out;
     zoom: 1.5;
 }
-
 .optionsList button:hover {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .lightdarkmodeButton {

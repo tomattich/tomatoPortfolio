@@ -19,7 +19,7 @@ export async function fetchProjects() {
     }
 }
 
-export function Projects() {    
+export function Projects() {
     const projectsContainer = document.querySelector(".projectsContainer");
     const featuredProjects = projects.filter(project => project.technologies.featured === true);
     let index = 0;
@@ -139,57 +139,99 @@ export function Projects() {
     });
 
     renderFeaturedProjects();
-    
+
     // All projects rendering function
-    
+
     function allProjects() {
         const allProjectsItemsContainer = document.querySelector(".allProjectsItemsContainer");
-        projects.forEach((project, pIndex) => {
-            allProjectsItemsContainer.innerHTML += `
-            <div class="allProjectsItem" data-project-index="${pIndex}" data-image-index="0">
-                <button class="buttons prevImgButton">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
-                    </svg>
-                </button>
-                <div class="allProjectsItemImage">
-                    <img class="allProjectsItemImageScroll" src="${project.images[0]}" alt="${project.name}">
+
+        allProjectsItemsContainer.insertAdjacentHTML('beforebegin', `
+        <div class="projectFilterOptions">
+            <button class="buttons filterButton active" data-filter="all">All</button>
+            <button class="buttons filterButton" data-filter="e-shop">E-shop</button>
+            <button class="buttons filterButton" data-filter="games">Games</button>
+            <button class="buttons filterButton" data-filter="agriculture">Agriculture</button>
+            <button class="buttons filterButton" data-filter="chat">Chat</button>
+        </div>
+        `);
+
+        function renderProjectsList(projectsToRender) {
+            allProjectsItemsContainer.innerHTML = "";
+            projectsToRender.forEach((project) => {
+                const originalIndex = projects.indexOf(project);
+                allProjectsItemsContainer.innerHTML += `
+                <div class="allProjectsItem" data-project-index="${originalIndex}" data-image-index="0">
+                    <button class="buttons prevImgButton">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="allProjectsItemImage">
+                        <img class="allProjectsItemImageScroll" src="${project.images[0]}" alt="${project.name}">
+                    </div>
+                    <button class="buttons nextImgButton">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                        </svg>
+                    </button>
+                    <div class="allProjectsItemInfo">
+                        <h1><span>${project.name}</span></h1>
+                        <p class="allProjectsItemDescription">${project.description}</p>
+                        <p>i worked in the :</p>
+                        <ul><span>${renderTech(project.technologies)}</span></ul>
+                        <p>of this project <span>!</span></p>
+                    </div>
+                    <div class="allProjectsItemGenres">
+                        <p>Genres :</p>
+                        <ul><span>${renderGenres(project.genres)}</span></ul>
+                    </div>
+                    <button class="buttons viewProjectItemButton" onclick="window.open('${project.link}', '_blank')">View Project</button>
                 </div>
-                <button class="buttons nextImgButton">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-                    </svg>
-                </button>
-                <div class="allProjectsItemInfo">
-                    <h1><span>${project.name}</span></h1>
-                    <p class="allProjectsItemDescription">${project.description}</p>
-                    <p>i worked in the :</p>
-                    <ul><span>${renderTech(project.technologies)}</span></ul>
-                    <p>of this project <span>!</span></p>
-                </div>
-                <div class="allProjectsItemGenres">
-                    <p>Genres :</p>
-                    <ul><span>${renderGenres(project.genres)}</span></ul>
-                </div>
-                <button class="buttons viewProjectItemButton" onclick="window.open('${project.link}', '_blank')">View Project</button>
-            </div>
-            `;
+                `;
+            });
+        }
+
+        // Initial render
+
+        renderProjectsList(projects);
+
+        // Filter eventlisteners
+
+        const filterButtons = document.querySelectorAll(".filterButton");
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+
+                button.classList.add("active");
+
+                const filter = button.dataset.filter;
+                if (filter === "all") {
+                    renderProjectsList(projects);
+                } else {
+                    const filtered = projects.filter(project => project.genres && project.genres[filter] === true);
+                    renderProjectsList(filtered);
+                }
+            });
         });
 
-        // Event delegation for image navigation
+        // Event delegation for image navigation code
 
         allProjectsItemsContainer.addEventListener("click", (e) => {
             const item = e.target.closest(".allProjectsItem");
+            if (!item) return;
+
             const project = projects[item.dataset.projectIndex];
             const img = item.querySelector(".allProjectsItemImageScroll");
             let imgIndex = parseInt(item.dataset.imageIndex);
+
             if (e.target.closest(".nextImgButton")) {
-                imgIndex +=1;
+                imgIndex += 1;
                 if (imgIndex >= project.images.length) {
                     imgIndex = 0;
                 }
             } else if (e.target.closest(".prevImgButton")) {
-                imgIndex -=1;
+                imgIndex -= 1;
                 if (imgIndex < 0) {
                     imgIndex = project.images.length - 1;
                 }
