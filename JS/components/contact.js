@@ -21,7 +21,7 @@ export function contact() {
                 </div>
                 <div class="contactDetailEmail">
                     <h4>EMAIL</h4>
-                    <p>tomattich<span>@</span>gmail<span>.</span>com</p>
+                    <p>yesmytomattich<span>@</span>gmail<span>.</span>com</p>
                 </div>
                 <div class="contactDetailAddress">
                     <h4>ADDRESS</h4>

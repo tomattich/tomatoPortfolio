@@ -46,4 +46,6 @@ export function footer() {
 
     // Scroll to Contacts section
     contactButton.addEventListener("click", () => scrollToSection(contact));
+    
+    
 }

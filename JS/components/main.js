@@ -1,31 +1,16 @@
-/* =========================================
+/* ===================================================================================  
    MAIN PAGE COMPONENT
    Renders the main page content including hero, services, about, and testimonials
-   ========================================= */
+   =================================================================================== */
 
 export function scrollToSection(element) {
     if (element) {
         element.scrollIntoView({
             behavior: "smooth"
         });
-    } else {
-        console.warn("Element not found for scrolling");
     }
 }
 
-export function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-export function scrollToBottom() {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-    });
-}
 
 export function mainPage() {
     const main = document.querySelector("main");
@@ -112,7 +97,6 @@ export function mainPage() {
 
 export function globalButtons() {
 
-    const cover = document.querySelector(".cover");
     const summary = document.querySelector(".summary");
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
     const allProjects = document.querySelector(".allProjects");
@@ -130,6 +114,23 @@ export function globalButtons() {
     const allProjectsButton = document.querySelector(".allProjectsButton");
     const featuredProjectsButton = document.querySelector(".featuredProjectsButton");
     const contact = document.querySelector(".contact");
+    const footer = document.querySelector("footer");
+
+
+    // Scroll to top and bottom
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
+    }
 
     // Show/hide side navigation based on scroll position
 
@@ -249,5 +250,21 @@ export function globalButtons() {
 
     sideOptionsListContactsButton.addEventListener("click", () => scrollToSection(contact));
 
+    // sideOptionsButton unrender when footer is visible
+
+    document.addEventListener("scroll", () => {
+        if (footer.getBoundingClientRect().top < window.innerHeight) {
+            sideOptionsButton.style.animation = "unrenderRight .6s ease-in-out";
+            setTimeout(() => {
+                sideOptionsButton.style.display = "none";
+            }, 500);
+        }
+        else {
+            sideOptionsButton.style.animation = "renderRight .6s ease-in-out";
+            setTimeout(() => {
+                sideOptionsButton.style.display = "flex";
+            }, 500);
+        }
+    })
 
 }

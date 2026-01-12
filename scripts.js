@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     mainPage();
     header();
-    contact();
     renderCover();
     renderSummary();
     globalButtons();
@@ -40,5 +39,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     await fetchProjects();
     Projects();
     testimonials();
+    contact();
     footer();
 });
