@@ -259,12 +259,6 @@ export function globalButtons() {
                 sideOptionsButton.style.display = "none";
             }, 500);
         }
-        else {
-            sideOptionsButton.style.animation = "renderRight .6s ease-in-out";
-            setTimeout(() => {
-                sideOptionsButton.style.display = "flex";
-            }, 500);
-        }
     })
 
 }
