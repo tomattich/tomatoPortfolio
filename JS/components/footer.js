@@ -84,9 +84,9 @@ export function footer() {
     const githubButton = footer.querySelector(".githubButton");
     const telegramButton = footer.querySelector(".telegramButton");
 
-    discordButton.addEventListener("click", () => window.open("https://discord.com", "_blank"));
-    githubButton.addEventListener("click", () => window.open("https://github.com", "_blank"));
-    telegramButton.addEventListener("click", () => window.open("https://t.me", "_blank"));
+    discordButton.addEventListener("click", () => window.open("https://discord.com/users/879734162909708328", "_blank"));
+    githubButton.addEventListener("click", () => window.open("https://github.com/tomattich", "_blank"));
+    telegramButton.addEventListener("click", () => window.open("https://t.me/Tomattich", "_blank"));
 
 
 }

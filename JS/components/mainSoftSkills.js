@@ -106,12 +106,36 @@ export function mainSoftSkills() {
                 </div>
             </div>
             `;
+            const hardSkills1 = document.querySelector(".hardSkills1");
+            const hardSkills2 = document.querySelector(".hardSkills2");
+            const hardSkills3 = document.querySelector(".hardSkills3");
+
+            setTimeout(() => {
+                hardSkills1.style.animation = "renderLeft 1s ease-in-out";
+                setTimeout(() => {
+                    hardSkills1.style.display = "flex";
+                }, 100);
+            }, 100);
+            setTimeout(() => {
+                hardSkills2.style.animation = "renderUp 1s ease-in-out";
+                setTimeout(() => {
+                    hardSkills2.style.display = "flex";
+                }, 100);
+            }, 200);
+            setTimeout(() => {
+                hardSkills3.style.animation = "renderRight 1s ease-in-out";
+                setTimeout(() => {
+                    hardSkills3.style.display = "flex";
+                }, 100);
+            }, 300);
+            
             number1 = document.querySelector(".n1");
             number2 = document.querySelector(".n2");
             number3 = document.querySelector(".n3");
             calcNumber(number1, 99);
             calcNumber(number2, 80);
             calcNumber(number3, 99);
+            
             mainSoftSkillsTitle.style.animation = "reveal .3s ease-in-out";
             setTimeout(() => {
                 mainSoftSkillsTitle.style.animation = "none";
@@ -211,7 +235,12 @@ export function mainSoftSkills() {
                     <p>Decision Making <span>!</span></p>
                 </div>
             </div>`;
-
+            const skill1 = document.querySelector(".skill1");
+            const skill2 = document.querySelector(".skill2");
+            const skill3 = document.querySelector(".skill3");
+            const skill4 = document.querySelector(".skill4");
+            const skill5 = document.querySelector(".skill5");
+            const skill6 = document.querySelector(".skill6");
             number1 = document.querySelector(".n1");
             number2 = document.querySelector(".n2");
             number3 = document.querySelector(".n3");
@@ -225,6 +254,43 @@ export function mainSoftSkills() {
             calcNumber(number4, 75);
             calcNumber(number5, 80);
             calcNumber(number6, 80);
+
+            setTimeout(() => {
+                skill1.style.animation = "renderLeft 1s ease-in-out";
+                setTimeout(() => {
+                    skill1.style.display = "flex";
+                }, 100);
+            }, 100);
+            setTimeout(() => {
+                skill2.style.animation = "renderLeft 1s ease-in-out";
+                setTimeout(() => {
+                    skill2.style.display = "flex";
+                }, 100);
+            }, 200);
+            setTimeout(() => {
+                skill3.style.animation = "renderLeft 1s ease-in-out";
+                setTimeout(() => {
+                    skill3.style.display = "flex";
+                }, 100);
+            }, 300);
+            setTimeout(() => {
+                skill4.style.animation = "renderRight 1s ease-in-out";
+                setTimeout(() => {
+                    skill4.style.display = "flex";
+                }, 100);
+            }, 100);
+            setTimeout(() => {
+                skill5.style.animation = "renderRight 1s ease-in-out";
+                setTimeout(() => {
+                    skill5.style.display = "flex";
+                }, 100);
+            }, 200);
+            setTimeout(() => {
+                skill6.style.animation = "renderRight 1s ease-in-out";
+                setTimeout(() => {
+                    skill6.style.display = "flex";
+                }, 100);
+            }, 300);
         }
     }
     changeTitle();

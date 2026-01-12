@@ -12,7 +12,7 @@
     min-height: 100dvh;
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 40% entry 60%;
+    animation-range: entry 20% entry 100%;
 }
 
 .contact ul {

@@ -136,6 +136,7 @@ ul li {
 .updownButton:hover {
     background-color: var(--flavorColor);
     color: #161616ff;
+    filter: drop-shadow(0 0 .5rem var(--flavorColor));
 }
 
 .sideOptionsButtons {
@@ -160,6 +161,7 @@ ul li {
 .sideOptionsButtons:hover {
     background-color: var(--flavorColor);
     color: #161616ff;
+    filter: drop-shadow(0 0 .5rem var(--flavorColor));
 }
 
 .sideOptionsList {

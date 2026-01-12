@@ -25,7 +25,7 @@
     min-height: 100dvh;
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 40% entry 60%;
+    animation-range: entry 20% entry 100%;
     overflow-x: hidden;
 }
 
@@ -123,7 +123,7 @@
 
 .testimonial1 p, .testimonial2 p, .testimonial3 p {
     background-color: #e9e9e9;
-    padding: 5rem 1rem 1rem 1rem;
+    padding: 1rem;
     border-radius: .5rem;
     font-weight: 700;
     font-size: 1.25rem;
@@ -133,6 +133,7 @@
     .testimonial1, .testimonial2, .testimonial3 {
         p {
             font-size: 1rem;
+            margin-top: 7rem;
         }
     }
 }
@@ -143,6 +144,7 @@
     gap: .5rem;
     width: fit-content;
     position: relative;
+    bottom: 2rem;
     left: 10rem;
 }
 
@@ -156,5 +158,39 @@
         top: 5rem;
         left: 1rem;
 
+    }
+}
+
+.testimonialRating {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    width: fit-content;
+    position: relative;
+    bottom: 2rem;
+    left: 10rem;
+}
+
+.testimonialRating svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--flavorColor);
+    filter: drop-shadow(0 0 .5rem var(--flavorColor));
+}
+
+.testimonial2>.testimonialRating>svg:nth-child(5), .testimonial2>.testimonialRating>svg:nth-child(4) {
+    fill: currentColor;
+    filter: drop-shadow(0 0 .5rem currentColor);
+}
+
+.testimonial3>.testimonialRating>svg:nth-child(5){
+    fill: currentColor;
+    filter: drop-shadow(0 0 .5rem currentColor);
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .testimonialRating {
+        top: 6rem;
+        left: 1rem;
     }
 }

@@ -23,17 +23,12 @@
     color: #fff;
 }
 
-.darkmode .language svg {
+.darkmode .language1, .darkmode .language2, .darkmode .language3, .darkmode .language4, .darkmode .language5 {
     background-color: #141414;
     color: #fff;
     border-radius: .5rem;
 }
 
-.darkmode .language svg:hover {
-    background-color: var(--flavorColor);
-    color: white;
-    border-radius: .5rem;
-}
 
 .darkmode .optionsList {
     background-color: #141414;

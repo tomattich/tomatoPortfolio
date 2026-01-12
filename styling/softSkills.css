@@ -6,12 +6,12 @@
 .mainSoftSkills {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     min-height: 100dvh;
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 40% entry 60%;
+    animation-range: entry 20% entry 80%;
 }
 
 .mainSoftSkills li {
@@ -27,6 +27,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;    
+    height: 100%;
 }
 
 /* soft skills container */
@@ -43,7 +44,7 @@
 /* each soft skill */
 
 .skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -51,9 +52,12 @@
     border-radius: .8rem;
     width: 30rem;
 }
+
 .skill4, .skill5, .skill6 {
     justify-content: flex-start;
 }
+
+
 @media (orientation: portrait) and (max-width: 768px) {
     .skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
        flex-direction: column;
@@ -242,7 +246,7 @@
     gap: 1rem;
 }
 .hardSkills1, .hardSkills2, .hardSkills3 {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     align-items: center;
