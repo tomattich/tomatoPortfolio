@@ -1,7 +1,13 @@
 {
     "1": {
         "name": "TomatoValue",
-        "images": ["assets/project1/project1img1.png", "assets/project1/project1img2.png", "assets/project1/project1img3.png", "assets/project1/project1img4.png", "assets/project1/project1img5.png"],
+        "images": [
+            "assets/project1/project1img1.png",
+            "assets/project1/project1img2.png",
+            "assets/project1/project1img3.png",
+            "assets/project1/project1img4.png",
+            "assets/project1/project1img5.png"
+        ],
         "description": "TomatoValue is the place to build and play your collection of Good Old Games and modern hits, With our games-first approach and respecting your need for ownership, we're here to make games last forever.",
         "link": "https://github.com/",
         "technologies": {
@@ -20,7 +26,13 @@
     },
     "2": {
         "name": "TomatoShop",
-        "images": ["assets/project2/project2img1.png", "assets/project2/project2img2.png", "assets/project2/project2img3.png", "assets/project2/project2img4.png", "assets/project2/project2img5.png"],
+        "images": [
+            "assets/project2/project2img1.png",
+            "assets/project2/project2img2.png",
+            "assets/project2/project2img3.png",
+            "assets/project2/project2img4.png",
+            "assets/project2/project2img5.png"
+        ],
         "description": "Your one-stop shop for all things agriculture. TomatoShop is a platform that allows you to buy and sell agricultural products. also it has a chat system to make it easier for you to communicate with the seller.",
         "link": "https://github.com/",
         "technologies": {
@@ -39,7 +51,13 @@
     },
     "3": {
         "name": "TomatoChat",
-        "images": ["assets/project3/project3img1.png", "assets/project3/project3img2.png", "assets/project3/project3img3.png", "assets/project3/project3img4.png", "assets/project3/project3img5.png"],
+        "images": [
+            "assets/project3/project3img1.png",
+            "assets/project3/project3img2.png",
+            "assets/project3/project3img3.png",
+            "assets/project3/project3img4.png",
+            "assets/project3/project3img5.png"
+        ],
         "description": "Your one-stop shop for all things agriculture. TomatoShop is a platform that allows you to buy and sell agricultural products. also it has a chat system to make it easier for you to communicate with the seller.",
         "link": "https://github.com/",
         "technologies": {
@@ -58,7 +76,13 @@
     },
     "4": {
         "name": "TomatoPlace",
-        "images": ["assets/project4/project4img1.png", "assets/project4/project4img2.png", "assets/project4/project4img3.png", "assets/project4/project4img4.png", "assets/project4/project4img5.png"],
+        "images": [
+            "assets/project4/project4img1.png",
+            "assets/project4/project4img2.png",
+            "assets/project4/project4img3.png",
+            "assets/project4/project4img4.png",
+            "assets/project4/project4img5.png"
+        ],
         "description": "TomatoPlace is a platform for sharing your favorite places with others, it has a chat system to make it easier for you to communicate with other users.",
         "link": "https://github.com/",
         "technologies": {
@@ -74,6 +98,155 @@
             "agriculture": false,
             "chat": true
         }
+    },
+    "5": {
+        "name": "TomatoFields",
+        "images": [
+            "assets/project5/project5img1.png",
+            "assets/project5/project5img1.png",
+            "assets/project5/project5img1.png",
+            "assets/project5/project5img1.png",
+            "assets/project5/project5img1.png"
+        ],
+        "description": "TomatoFields is a comprehensive dashboard for managing large-scale tomato farms. Track yield, monitor weather conditions, and manage harvest schedules effectively.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": true,
+            "frontend": true,
+            "database": true,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": false,
+            "games": false,
+            "agriculture": true,
+            "chat": false
+        }
+    },
+    "6": {
+        "name": "TomatoZone",
+        "images": [
+            "assets/project6/project6img1.png",
+            "assets/project6/project6img1.png",
+            "assets/project6/project6img1.png",
+            "assets/project6/project6img1.png",
+            "assets/project6/project6img1.png"
+        ],
+        "description": "TomatoZone is a cyberpunk-themed chat application for gamers. Connect with friends, share game stats, and join communities in a visually stunning environment.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": true,
+            "frontend": true,
+            "database": true,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": false,
+            "games": true,
+            "agriculture": false,
+            "chat": true
+        }
+    },
+    "7": {
+        "name": "TomatoWear",
+        "images": [
+            "assets/project7/project7img1.png",
+            "assets/project7/project7img1.png",
+            "assets/project7/project7img1.png",
+            "assets/project7/project7img1.png",
+            "assets/project7/project7img1.png"
+        ],
+        "description": "TomatoWear is a minimalist fashion brand dedicated to red aesthetics. Explore our curated collection of high-quality apparel.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": true,
+            "frontend": true,
+            "database": true,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": true,
+            "games": false,
+            "agriculture": false,
+            "chat": false
+        }
+    },
+    "8": {
+        "name": "TomatoQuest",
+        "images": [
+            "assets/project8/project8img1.png",
+            "assets/project8/project8img1.png",
+            "assets/project8/project8img1.png",
+            "assets/project8/project8img1.png",
+            "assets/project8/project8img1.png"
+        ],
+        "description": "Embark on an epic 2D adventure in TomatoQuest. Collect rare heirloom tomatoes, defeat pests, and save the garden kingdom in this retro RPG.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": false,
+            "frontend": true,
+            "database": false,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": false,
+            "games": true,
+            "agriculture": false,
+            "chat": false
+        }
+    },
+    "9": {
+        "name": "TomatoSense",
+        "images": [
+            "assets/project9/project9img1.png",
+            "assets/project9/project9img1.png",
+            "assets/project9/project9img1.png",
+            "assets/project9/project9img1.png",
+            "assets/project9/project9img1.png"
+        ],
+        "description": "TomatoSense provides real-time monitoring for your smart greenhouse. Track soil moisture, temperature, and humidity with precision IoT integration.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": true,
+            "frontend": true,
+            "database": true,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": false,
+            "games": false,
+            "agriculture": true,
+            "chat": false
+        }
+    },
+    "10": {
+        "name": "TomatoTeam",
+        "images": [
+            "assets/project10/project10img1.png",
+            "assets/project10/project10img1.png",
+            "assets/project10/project10img1.png",
+            "assets/project10/project10img1.png",
+            "assets/project10/project10img1.png"
+        ],
+        "description": "Streamline your workflow with TomatoTeam. A collaborative project management tool featuring real-time chat, kanban boards, and task tracking.",
+        "link": "https://github.com/",
+        "technologies": {
+            "backend": true,
+            "frontend": true,
+            "database": true,
+            "design": true,
+            "featured": false
+        },
+        "genres": {
+            "e-shop": false,
+            "games": false,
+            "agriculture": false,
+            "chat": true
+        }
     }
-    
 }

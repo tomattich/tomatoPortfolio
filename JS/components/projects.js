@@ -155,9 +155,15 @@ export function Projects() {
         </div>
         `);
 
-        function renderProjectsList(projectsToRender) {
+        let isExpanded = false;
+        let currentFilteredProjects = projects;
+
+        function renderProjectsList() {
             allProjectsItemsContainer.innerHTML = "";
-            projectsToRender.forEach((project) => {
+
+            const projectsToShow = isExpanded ? currentFilteredProjects : currentFilteredProjects.slice(0, 5);
+
+            projectsToShow.forEach((project) => {
                 const originalIndex = projects.indexOf(project);
                 allProjectsItemsContainer.innerHTML += `
                 <div class="allProjectsItem" data-project-index="${originalIndex}" data-image-index="0">
@@ -189,11 +195,32 @@ export function Projects() {
                 </div>
                 `;
             });
+
+            // Remove existing button
+
+            const existingBtn = document.querySelector('.showMoreProjectsButton');
+            if (existingBtn) {
+                existingBtn.remove();
+            }
+
+            // Handle Show More / Show Less Button
+
+            if (currentFilteredProjects.length > 5) {
+                const btnText = isExpanded ? "Show Less" : "Show More";
+                allProjectsItemsContainer.insertAdjacentHTML('afterend', `<button class="showMoreProjectsButton">${btnText}</button>`);
+
+                const showMoreBtn = document.querySelector('.showMoreProjectsButton');
+
+                showMoreBtn.addEventListener('click', () => {
+                    isExpanded = !isExpanded;
+                    renderProjectsList();
+                });
+            }
         }
 
         // Initial render
 
-        renderProjectsList(projects);
+        renderProjectsList();
 
         // Filter eventlisteners
 
@@ -206,12 +233,14 @@ export function Projects() {
                 button.classList.add("active");
 
                 const filter = button.dataset.filter;
+                isExpanded = false; // Reset expansion on filter change
+
                 if (filter === "all") {
-                    renderProjectsList(projects);
+                    currentFilteredProjects = projects;
                 } else {
-                    const filtered = projects.filter(project => project.genres && project.genres[filter] === true);
-                    renderProjectsList(filtered);
+                    currentFilteredProjects = projects.filter(project => project.genres && project.genres[filter] === true);
                 }
+                renderProjectsList();
             });
         });
 

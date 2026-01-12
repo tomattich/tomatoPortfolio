@@ -672,3 +672,19 @@
     box-shadow: 0 0 .5rem var(--flavorColor);
 }
 
+.showMoreProjectsButton {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 1rem;
+    width: 100%;
+    font-family: inherit;
+    transition: color 0.3s ease-in-out;
+}
+
+.showMoreProjectsButton:hover {
+    color: var(--flavorColor);
+}
+
