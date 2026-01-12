@@ -37,6 +37,7 @@
 .coverText span {
     color: var(--flavorColor);
     zoom: 1.5;
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .coverText :nth-child(1) {
@@ -60,6 +61,7 @@
     border-right: .15em solid var(--flavorColor);
     white-space: nowrap;
     width: fit-content;
+    text-shadow: 0 0 .5rem var(--flavorColor);
     animation: typing 2s steps(25, end), blink-caret 1s step-end infinite;
 }
 
@@ -118,6 +120,7 @@
 .language svg:hover {
     background-color: var(--flavorColor);
     color: white;
+    box-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .stack1 {
@@ -221,6 +224,7 @@
 
 .skills span {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .skills svg {
@@ -243,6 +247,7 @@
 
 .aboutMe span {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .aboutMe h1 {
@@ -303,6 +308,7 @@
 
 .allProjectsContainer span {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .allProjectsContainer h1 {
@@ -374,6 +380,13 @@
     border-radius: .5rem;
 }
 
+.allProjectsItem:hover {
+    transition: all .3s ease-in-out;
+    transform: translateY(.5rem);
+    box-shadow: 0 0 1rem var(--flavorColor);
+
+}
+
 @media (orientation: portrait) and (max-width: 768px) {
     .allProjectsItem {
         zoom: .8;
@@ -401,6 +414,7 @@
 
 .allProjectsItem span {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .allProjectsItemInfo {
@@ -429,6 +443,7 @@
 
 .featuredWorks span {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .featuredWorks li {
@@ -440,6 +455,7 @@
 @media (orientation: portrait) and (max-width: 768px) {
     .featuredWorks li {
         right: .06rem;
+        
     }
 }
 
@@ -503,8 +519,14 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    padding: .5rem;
     border-radius: 1rem;
+    box-shadow: 0 0 .5rem var(--flavorColor);
+}
+
+.projectImageMain img:hover {
+    transform: translateY(-.5rem);
+    transition: all 0.3s ease-in-out;
+
 }
 
 @media (orientation: portrait) and (max-width: 768px) {
@@ -560,6 +582,10 @@
     justify-self: flex-end;
 }
 
+.viewProjectButton:hover {
+    box-shadow: 0 0 .5rem var(--flavorColor);
+}
+
 .projectPrevNextButtons {
     grid-area: prevNextButtons;
     width: 100%;
@@ -586,6 +612,14 @@
     color: #161616ff;
 }
 
+.nextProjectButton:hover {
+    box-shadow: 0 0 .5rem var(--flavorColor);
+}
+
+.prevProjectButton:hover {
+    box-shadow: 0 0 .5rem var(--flavorColor);
+}
+
 .projectDotButtons {
     display: flex;
     flex-direction: row;
@@ -609,5 +643,6 @@
 .projectDotButtons button:hover {
     background-color: var(--flavorColor);
     color: #161616ff;
+    box-shadow: 0 0 .5rem var(--flavorColor);
 }
 

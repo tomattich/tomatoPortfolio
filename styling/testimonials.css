@@ -135,3 +135,25 @@
         }
     }
 }
+
+.testimonialName {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    width: fit-content;
+    position: relative;
+    left: 10rem;
+}
+
+.testimonialName span {
+    text-shadow: 0 0 .5rem var(--flavorColor);
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .testimonialName {
+        flex-direction: column;
+        top: 5rem;
+        left: 1rem;
+
+    }
+}

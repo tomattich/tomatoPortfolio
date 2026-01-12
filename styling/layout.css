@@ -30,6 +30,7 @@ header span img {
     width: .5rem;
     position: relative;
     filter: hue-rotate(var(--hueRotation));
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 header button {
@@ -70,15 +71,18 @@ nav button {
     flex-direction: column;
     background-color: transparent;
     border: none;
+    
 }
 
 nav button:hover + .hrline {
     width: 100%;
     animation: renderLeftLine .3s ease-in-out;
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 nav button:hover {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 @media (orientation: portrait) and (max-width: 768px) {
@@ -149,6 +153,7 @@ nav button:hover {
 
 .projectsList button:hover {
     color: var(--flavorColor);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 /* Main */
@@ -196,5 +201,6 @@ footer {
 .footerNavigation button:hover {
     color: var(--flavorColor);
     background-color: transparent;
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 

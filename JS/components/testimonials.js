@@ -20,6 +20,7 @@ export function testimonials() {
                 </button>
                 <div class="testimonial1">
                     <img src="assets/testimonials/testimonial1.png" alt="">
+                    <div class="testimonialName"><h1>John Doe</h1> <span>CEO, Company</span></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, vero quo vel voluptate tempora tempore obcaecati laboriosam rem aspernatur cum necessitatibus libero similique mollitia nihil aliquid magnam quibusdam? Voluptates, eos?
                     Accusamus ipsum esse neque consequatur voluptatem. Cupiditate ullam, quis, nihil ab fuga veniam repellat eligendi ut earum eos facere quam provident error eius et itaque amet facilis labore ipsa. Facilis?
                     Illo quia numquam iste minus ipsam impedit, itaque amet fugit aspernatur incidunt consequatur quo, reprehenderit eum nostrum molestiae mollitia enim inventore iure rem labore qui odio consequuntur. Voluptatibus, esse dolorum.
@@ -27,12 +28,14 @@ export function testimonials() {
                 </div>
                 <div class="testimonial2">
                     <img src="assets/testimonials/testimonial2.png" alt="">
+                    <div class="testimonialName"><h1>John Doe</h1> <span>CEO, Company</span></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi asperiores temporibus dolore a velit vitae natus magnam. Adipisci, quos aliquid. Quas blanditiis minima error voluptates quam ad adipisci expedita!
                     Recusandae, qui eligendi. Doloremque, pariatur. Minima eaque omnis amet. Dolorum, fugiat maiores. Dicta sequi cum dolorem. Neque debitis consequatur enim sunt sapiente voluptates fugiat distinctio possimus magni, assumenda veniam voluptatem?
                     Nihil obcaecati fuga necessitatibus praesentium, rem repellendus officia sapiente a asperiores. Non</p>
                 </div>
                 <div class="testimonial3">
                     <img src="assets/testimonials/testimonial3.png" alt="">
+                    <div class="testimonialName"><h1>John Doe</h1> <span>CEO, Company</span></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi asperiores temporibus dolore a velit vitae natus magnam. Adipisci, quos aliquid. Quas blanditiis minima error voluptates quam ad adipisci expedita!
                     Recusandae, qui eligendi. Doloremque, pariatur. Minima eaque omnis amet. Dolorum, fugiat maiores. Dicta sequi cum dolorem. Neque debitis consequatur enim sunt sapiente voluptates fugiat distinctio possimus magni, assumenda veniam voluptatem?
                     Nihil obcaecati fuga necessitatibus praesentium, rem repellendus officia sapiente a asperiores. Non</p>

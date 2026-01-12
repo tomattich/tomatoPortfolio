@@ -58,10 +58,10 @@ export function Projects() {
                 </div>
             </div>
             <div class="projectInfoContainer">
-                    <h1>${featuredProject.name}</h1>
+                    <h1><span>${featuredProject.name}</span></h1>
                     <p class="projectDescription">${featuredProject.description}</p>
                     <div class="technologies">
-                        <p>i worked in the  :</p>
+                        <p>i worked in the  <span> :</span></p>
                         <ul class="techList">${renderTech(featuredProject.technologies)}</ul>
                         <p>of this project <span>!</span></p>
                     </div>
@@ -161,15 +161,15 @@ export function Projects() {
                     </svg>
                 </button>
                 <div class="allProjectsItemInfo">
-                    <h1>${project.name}</h1>
+                    <h1><span>${project.name}</span></h1>
                     <p class="allProjectsItemDescription">${project.description}</p>
                     <p>i worked in the :</p>
-                    <ul>${renderTech(project.technologies)}</ul>
+                    <ul><span>${renderTech(project.technologies)}</span></ul>
                     <p>of this project <span>!</span></p>
                 </div>
                 <div class="allProjectsItemGenres">
                     <p>Genres :</p>
-                    <ul>${renderGenres(project.genres)}</ul>
+                    <ul><span>${renderGenres(project.genres)}</span></ul>
                 </div>
                 <button class="buttons viewProjectItemButton" onclick="window.open('${project.link}', '_blank')">View Project</button>
             </div>
@@ -193,7 +193,7 @@ export function Projects() {
                 if (imgIndex < 0) {
                     imgIndex = project.images.length - 1;
                 }
-            } else return;
+            }
 
             item.dataset.imageIndex = imgIndex;
             img.src = project.images[imgIndex];

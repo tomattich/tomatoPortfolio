@@ -68,31 +68,37 @@
 .skill1 span{
     color: var(--flavorColor);
     filter: hue-rotate(180deg);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .skill2 span{
     color: var(--flavorColor);
     filter: hue-rotate(120deg);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .skill3 span{
     color: var(--flavorColor);
     filter: hue-rotate(260deg);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .skill4 span{
     color: var(--flavorColor);
     filter: hue-rotate(280deg);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .skill5 span{
     color: var(--flavorColor);
     filter: hue-rotate(320deg);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .skill6 span{
     color: var(--flavorColor);
     filter: hue-rotate(380deg);
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 
@@ -102,6 +108,7 @@
     position: relative;
     height: 10rem;
     width: 10rem;
+    text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
 .circularProgress1 .outer , .circularProgress2 .outer , .circularProgress3 .outer , .circularProgress4 .outer , .circularProgress5 .outer , .circularProgress6 .outer {
@@ -164,7 +171,7 @@
 .circularProgress1 circle , .circularProgress2 circle , .circularProgress3 circle , .circularProgress4 circle , .circularProgress5 circle , .circularProgress6 circle {
     fill: none;
     stroke: var(--flavorColor);
-    stroke-width: .1rem;
+    stroke-width: .2rem;
     stroke-dashoffset: 1000;
     animation: progressAnimation 2s forwards;
 
