@@ -17,7 +17,7 @@ export function contact() {
             <div class="contactDetails">
                 <div class="contactDetailPhoneNumber">
                     <h4>PHONE</h4>
-                    <p><span>+</span>213 6 96 74 20 21</p>
+                    <p><span>+</span>213 X XX XX XX XX</p>
                 </div>
                 <div class="contactDetailEmail">
                     <h4>EMAIL</h4>
