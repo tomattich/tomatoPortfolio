@@ -8,6 +8,12 @@ let projects;
 
 // Fetch projects data from JSON file
 
+/**
+ * Fetches project data from the JSON file.
+ * Populates the fetchedProjects and projects variables.
+ * @async
+ * @returns {Promise<void>}
+ */
 export async function fetchProjects() {
     try {
         const response = await fetch("JS/data/projects.json");
@@ -19,6 +25,10 @@ export async function fetchProjects() {
     }
 }
 
+/**
+ * Initializes the Projects component.
+ * Sets up featured projects slider, project navigation, and the "All Projects" section with filtering.
+ */
 export function Projects() {
     const projectsContainer = document.querySelector(".projectsContainer");
     const featuredProjects = projects.filter(project => project.technologies.featured === true);
@@ -26,6 +36,11 @@ export function Projects() {
 
     // Generate HTML list of technologies used in project
 
+    /**
+     * Generates HTML list items for technologies used in a project.
+     * @param {Object} technologies - Object containing technology flags (e.g., {backend: true}).
+     * @returns {string} HTML string of list items.
+     */
     function renderTech(technologies) {
         let techList = "";
         for (let tech of Object.keys(technologies)) {
@@ -38,6 +53,11 @@ export function Projects() {
 
     // Generate HTML list of genres used in project
 
+    /**
+     * Generates HTML list items for project genres.
+     * @param {Object} genres - Object containing genre flags.
+     * @returns {string} HTML string of list items.
+     */
     function renderGenres(genres) {
         let genreList = "";
         for (let genre of Object.keys(genres)) {
@@ -48,6 +68,10 @@ export function Projects() {
         return genreList;
     }
     // Render the current featured project
+    /**
+     * Renders the currently selected featured project into the DOM.
+     * Updates the project details, image, and navigation dots.
+     */
     function renderFeaturedProjects() {
         const featuredProject = featuredProjects[index];
         projectsContainer.innerHTML = `
@@ -88,6 +112,10 @@ export function Projects() {
 
     // Navigate to next project
 
+    /**
+     * Navigates to the next featured project.
+     * Loops back to the start if at the end.
+     */
     function nextProject() {
         index++;
         if (index >= featuredProjects.length) {
@@ -98,6 +126,10 @@ export function Projects() {
 
     // Navigate to previous project
 
+    /**
+     * Navigates to the previous featured project.
+     * Loops to the end if at the start.
+     */
     function prevProject() {
         index--;
         if (index < 0) {
@@ -108,6 +140,10 @@ export function Projects() {
 
     // Highlight the active project dot indicator
 
+    /**
+     * Updates the visual state of the project navigation dots.
+     * Highlights the dot corresponding to the current project index.
+     */
     function dotsHighlight() {
         const project1 = document.querySelector(".project1");
         const project2 = document.querySelector(".project2");
@@ -142,6 +178,10 @@ export function Projects() {
 
     // All projects rendering function
 
+    /**
+     * Initializes and renders the "All Projects" section.
+     * Handles rendering, filtering, and "Show More/Less" functionality.
+     */
     function allProjects() {
         const allProjectsItemsContainer = document.querySelector(".allProjectsItemsContainer");
 
@@ -158,6 +198,11 @@ export function Projects() {
         let isExpanded = false;
         let currentFilteredProjects = projects;
 
+        /**
+         * Renders the list of projects into the container.
+         * Toggles between showing a limited number (5) and all projects based on expansion state.
+         * Also manages the "Show More/Less" button visibility.
+         */
         function renderProjectsList() {
             allProjectsItemsContainer.innerHTML = "";
 

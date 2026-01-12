@@ -8,6 +8,10 @@ export function testimonials() {
 
     // TestimonialsContainer content
 
+    /**
+     * Renders the testimonials carousel content.
+     * Includes navigation buttons and testimonial cards.
+     */
     function renderTestimonials() {
         testimonialsContainer.innerHTML = `
         <button class="buttons testimonialsButtonLeft"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -46,6 +50,10 @@ export function testimonials() {
 
     // Start automatic scrolling through testimonials
 
+    /**
+     * Starts the automatic scrolling interval.
+     * Scrolls horizontally every 3 seconds.
+     */
     function startAutoScroll() {
         interval = setInterval(() => {
             testimonialsContainer.scrollLeft += testimonialsContainer.offsetWidth + 17;
@@ -57,6 +65,9 @@ export function testimonials() {
 
     // Stop automatic scrolling
 
+    /**
+     * Stops the automatic scrolling interval.
+     */
     function stopAutoScroll() {
         clearInterval(interval);
     }

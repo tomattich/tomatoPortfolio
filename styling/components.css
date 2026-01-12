@@ -4,6 +4,7 @@
    ========================================= */
 
 /* Buttons */
+/* Standard button styling with hover effects */
 .buttons {
     display: flex;
     align-items: center;
@@ -23,6 +24,7 @@
 }
 
 /* Lines */
+/* Decorative vertical line using border */
 .line {
     border: none;
     border-left: .15em solid var(--flavorColor);
@@ -74,6 +76,7 @@ ul li {
     color: var(--flavorColor);
     text-shadow: 0 0 .5rem var(--flavorColor);
 }
+/* Popup menu list styles */
 .optionsList {
     position: absolute;
     display: none;

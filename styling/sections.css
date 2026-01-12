@@ -4,6 +4,7 @@
    ========================================= */
 
 /* Cover / Hero Section */
+/* Main cover container with centered flex layout */
 .cover {
     display: flex;
     justify-content: center;
@@ -56,7 +57,6 @@
     display: flex;
     align-items: baseline;
     gap: .5rem;
-    overflow: hidden;
     text-align: left;
     border-right: .15em solid var(--flavorColor);
     white-space: nowrap;
@@ -166,6 +166,7 @@
 }
 
 /* Summary / About Section */
+/* Summary grid layout with skills and about me sections */
 .summary {
     display: grid;
     height: fit-content;
@@ -283,6 +284,7 @@
 
 /* All Projects Section */
 
+/* Container for the "All Projects" section */
 .allProjects {
     grid-area: allProjects;
     display: flex;
@@ -672,6 +674,7 @@
     box-shadow: 0 0 .5rem var(--flavorColor);
 }
 
+/* "Show More" button styling for the projects list */
 .showMoreProjectsButton {
     border: none;
     background: transparent;

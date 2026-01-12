@@ -1,3 +1,8 @@
+/**
+ * Initializes the Contact component.
+ * Renders the contact section with form and contact details.
+ * Handles form validation and submission simulation.
+ */
 export function contact() {
     const contact = document.querySelector(".contact");
     contact.innerHTML = `
@@ -39,7 +44,10 @@ export function contact() {
             <label for="message">Message</label>
             <div class="contactInputMessagePopOut"><span>!</span>Please enter a valid message<span>!</span></div>
             <textarea class="contactInput contactInputMessage" id="message"></textarea>
-            <button class="buttons contactButton" type="submit">Send</button>
+            <div class="contactButtonContainer">
+                <button class="buttons contactButton" type="submit">Send</button>
+                <div class="contactSuccess">Message sent successfully <span>!</span></div>
+            </div>
         </form>
     </div>
     `;
@@ -51,13 +59,19 @@ export function contact() {
     const contactInputNamePopOut = document.querySelector(".contactInputNamePopOut");
     const contactInputEmailPopOut = document.querySelector(".contactInputEmailPopOut");
     const contactInputMessagePopOut = document.querySelector(".contactInputMessagePopOut");
+    const contactSuccess = document.querySelector(".contactSuccess");
 
-/* =========================================
-   VALIDATION
-   ========================================= */
+    /* =========================================
+       VALIDATION
+       ========================================= */
 
     /* NAME VALIDATION */
 
+    /**
+     * Validates the name input.
+     * Name must be at least 3 characters long.
+     * @returns {boolean} True if valid, false otherwise.
+     */
     const validateName = () => {
         if (contactInputName.value.trim().length < 3) {
             return false;
@@ -67,6 +81,11 @@ export function contact() {
 
     /* EMAIL VALIDATION */
 
+    /**
+     * Validates the email input.
+     * Email must be longer than 3 characters and contain an '@' symbol.
+     * @returns {boolean} True if valid, false otherwise.
+     */
     const validateEmail = () => {
         if (contactInputEmail.value.length <= 3 || !contactInputEmail.value.includes("@")) {
             return false;
@@ -76,6 +95,11 @@ export function contact() {
 
     /* MESSAGE VALIDATION */
 
+    /**
+     * Validates the message input.
+     * Message must not be empty.
+     * @returns {boolean} True if valid, false otherwise.
+     */
     const validateMessage = () => {
         if (contactInputMessage.value.trim() === "") {
             return false;
@@ -101,12 +125,14 @@ export function contact() {
             contactInputNamePopOut.style.display = "none";
             contactInputEmailPopOut.style.display = "none";
             contactInputMessagePopOut.style.display = "none";
-            alert("Message sent successfully");
             contactInputName.value = "";
             contactInputEmail.value = "";
             contactInputMessage.value = "";
+            contactSuccess.style.display = "flex";
+            setTimeout(() => {
+                contactSuccess.style.display = "none";
+            }, 3000);
         }
-
     });
 
 }

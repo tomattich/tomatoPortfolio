@@ -6,6 +6,11 @@ import { scrollToSection } from './main.js';
    Renders the header with navigation, theme switcher, and dark mode toggle
    ========================================= */
 
+/**
+ * Initializes the Header component.
+ * Renders the navigation bar, theme switcher, and dark mode toggle.
+ * Handles responsive menu behavior and theme persistence.
+ */
 export function header() {
     const header = document.querySelector("header");
     let mode = localStorage.getItem("mode") || "light";

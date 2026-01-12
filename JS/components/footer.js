@@ -1,5 +1,10 @@
 import { scrollToSection } from './main.js';
 
+/**
+ * Initializes the Footer component.
+ * Renders the footer navigation, social links, and copyright info.
+ * Sets up scroll navigation event listeners.
+ */
 export function footer() {
     const footer = document.querySelector("footer");
     footer.innerHTML = `
@@ -72,6 +77,16 @@ export function footer() {
 
     // Scroll to Contacts section
     contactButton.addEventListener("click", () => scrollToSection(contact));
+
+    // Social Media Links
+
+    const discordButton = footer.querySelector(".discordButton");
+    const githubButton = footer.querySelector(".githubButton");
+    const telegramButton = footer.querySelector(".telegramButton");
+
+    discordButton.addEventListener("click", () => window.open("https://discord.com", "_blank"));
+    githubButton.addEventListener("click", () => window.open("https://github.com", "_blank"));
+    telegramButton.addEventListener("click", () => window.open("https://t.me", "_blank"));
 
 
 }

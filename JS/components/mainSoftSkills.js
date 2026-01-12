@@ -1,3 +1,8 @@
+/**
+ * Initializes the Soft Skills/Hard Skills component.
+ * Renders the skills section and handles the toggle between "Soft Skills" and "Hard Skills".
+ * Animates skill progress bars and counters.
+ */
 export function mainSoftSkills() {
     const mainSoftSkills = document.querySelector(".mainSoftSkills");
 
@@ -23,7 +28,7 @@ export function mainSoftSkills() {
     const mainSoftSkillsChanger2 = document.querySelector(".mainSoftSkillsChanger2")
     const mainSoftSkillsTitle = document.querySelector(".mainSoftSkillsTitle");
     const mainSoftSkillsContainer = document.querySelector(".mainSoftSkillsContainer");
-    
+
     let number1;
     let number2;
     let number3;
@@ -31,6 +36,11 @@ export function mainSoftSkills() {
     let number5;
     let number6;
 
+    /**
+     * Animates a numerical counter to a target percentage.
+     * @param {HTMLElement} number - The DOM element to update.
+     * @param {number} percentage - The target percentage value.
+     */
     function calcNumber(number, percentage) {
         let i = 0;
         const interval = setInterval(() => {
@@ -42,7 +52,11 @@ export function mainSoftSkills() {
             }
         }, 20);
     }
-    
+
+    /**
+     * Toggles between "Soft Skills" and "Hard Skills" views.
+     * Updates the section title, renders the corresponding skills container, and triggers animations.
+     */
     function changeTitle() {
         if (mainSoftSkillsTitle.innerHTML === "Soft Skills") {
             mainSoftSkillsTitle.innerHTML = "Hard Skills";

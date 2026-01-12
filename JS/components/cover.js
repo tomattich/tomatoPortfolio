@@ -1,3 +1,7 @@
+/**
+ * Renders the Cover (Hero) section.
+ * Displays the welcome message, animated name, developer title, and animated language icons.
+ */
 export function renderCover() {
     const cover = document.querySelector(".cover");
     cover.innerHTML = `
@@ -56,6 +60,6 @@ export function renderCover() {
             </div>
         </div>
         `;
-        const gotProject = document.querySelector(".gotProject");
-        const myResume = document.querySelector(".myResume");
-    }
+    const gotProject = document.querySelector(".gotProject");
+    const myResume = document.querySelector(".myResume");
+}

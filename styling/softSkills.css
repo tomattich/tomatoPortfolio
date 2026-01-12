@@ -2,6 +2,7 @@
    SOFT SKILLS SECTION
    ========================================= */
 
+/* Main container for soft skills with reveal animation */
 .mainSoftSkills {
     display: flex;
     flex-direction: column;
@@ -104,6 +105,7 @@
 
 /* Circular Progress Bar */
 
+/* Circular progress bar sizing and positioning */
 .circularProgress1 , .circularProgress2 , .circularProgress3 , .circularProgress4 , .circularProgress5 , .circularProgress6 {
     position: relative;
     height: 10rem;

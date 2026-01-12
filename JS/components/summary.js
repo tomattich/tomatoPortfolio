@@ -1,4 +1,8 @@
-export function renderSummary () {
+/**
+ * Initializes and renders the Summary component.
+ * Displays the "Services" and "About Me" sections with stats and details.
+ */
+export function renderSummary() {
     const summary = document.querySelector(".summary")
     summary.innerHTML = `
         <div class="skills">
@@ -48,5 +52,5 @@ export function renderSummary () {
             </div>
         </div>
         `
-    
+
 }

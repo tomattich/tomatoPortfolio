@@ -15,10 +15,15 @@ import { footer } from './JS/components/footer.js';
 
 // Wait for DOM to be fully loaded
 
+/*
+ * Main application entry point.
+ * Initializes the application when the DOM is fully loaded.
+ * Handles dark mode preference, initializes components, and fetches project data.
+ */
 document.addEventListener("DOMContentLoaded", async () => {
-    
+
     // Load dark mode preference from localStorage
-    
+
     const mode = localStorage.getItem("mode") || "light";
     if (mode === "dark") {
         document.body.classList.add("darkmode");
@@ -27,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Initialize all page components
-    
+
     mainPage();
     header();
     renderCover();
@@ -35,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     globalButtons();
     mainSoftSkills();
     // Fetch projects data before initializing Projects component
-    
+
     await fetchProjects();
     Projects();
     testimonials();

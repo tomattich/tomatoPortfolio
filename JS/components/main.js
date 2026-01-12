@@ -3,6 +3,10 @@
    Renders the main page content including hero, services, about, and testimonials
    =================================================================================== */
 
+/**
+ * Scrolls the window to the specified element with smooth behavior.
+ * @param {HTMLElement} element - The target element to display.
+ */
 export function scrollToSection(element) {
     if (element) {
         element.scrollIntoView({
@@ -12,6 +16,10 @@ export function scrollToSection(element) {
 }
 
 
+/**
+ * Renders the main page layout structure.
+ * Creates sections for Cover, Summary, Skills, Projects, Testimonials, and Contact.
+ */
 export function mainPage() {
     const main = document.querySelector("main");
     main.innerHTML = `
@@ -95,6 +103,10 @@ export function mainPage() {
    Handles scroll-to-top button and side navigation menu
    ========================================= */
 
+/**
+ * Initializes global UI buttons and interactions.
+ * Handles scroll-to-top, side navigation menu, and scroll animations.
+ */
 export function globalButtons() {
 
     const summary = document.querySelector(".summary");

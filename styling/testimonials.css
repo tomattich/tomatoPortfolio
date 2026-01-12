@@ -1,5 +1,6 @@
 /* Testimonials Section */
 
+/* Main container for the testimonials page view */
 .testimonialsPage {
     grid-area: testimonials;
     display: flex;

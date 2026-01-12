@@ -3,6 +3,7 @@
    All @keyframes definitions
    ========================================= */
 
+/* Simple rotation animation */
 @keyframes rotation {
     from {
         transform: rotate(0deg);
@@ -11,6 +12,7 @@
         transform: rotate(360deg);
     }
 }
+/* Typing effect animation for text */
 @keyframes typing {
     from {
         width: 0;
@@ -27,6 +29,7 @@
         border-color: var(--flavorColor);
     }
 }
+/* Slide in from left */
 @keyframes renderLeft {
     from {
         opacity: 0;

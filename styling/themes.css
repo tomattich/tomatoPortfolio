@@ -3,6 +3,7 @@
    Dark mode and theme-specific overrides
    ========================================= */
 
+/* Dark mode base overrides */
 .darkmode {
     background-color: #000;
     color: #fff;
@@ -39,6 +40,7 @@
     color: #fff;
 }
 
+/* Dark mode styles for specific buttons */
 .darkmode .updownButton {
     background-color: #383838;
     color: #fff;
@@ -68,6 +70,7 @@
     color: #fff;
 }
 
+/* Footer specific dark mode styling */
 .footerDarkmode {
     background-color: #161616ff;
     color: #fff;

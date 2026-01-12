@@ -4,6 +4,7 @@
    ========================================= */
 
 /* Header */
+/* Header container with absolute positioning */
 header {
     grid-area: header;
     display: flex;
@@ -51,6 +52,7 @@ nav {
     gap: 1.5rem;
 }
 
+/* Animated underline for navigation links */
 nav .hrline {
     margin-top: .2rem;
     height: .1rem;
@@ -125,6 +127,7 @@ nav button:hover {
     }
 }
 
+/* Popup projects list for mobile/options view */
 .projectsList {
     display: none;
     flex-direction: column;
@@ -165,6 +168,7 @@ main {
 }
 
 /* Footer */
+/* Main footer container layout */
 footer {
     grid-area: footer;
     padding: 3rem 10%; /* increased padding closer to Hyprland's spacing */
@@ -260,6 +264,7 @@ footer {
     transition: all 0.3s ease;
 }
 
+/* Social media buttons hover effect */
 .footerSocials button:hover svg {
     filter: drop-shadow(0 0 .3rem var(--flavorColor));
     color: var(--flavorColor);
