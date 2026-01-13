@@ -216,10 +216,6 @@
     min-height: 100dvh;
     content-visibility: auto;
     align-items: center;
-    contain-intrinsic-size: 100dvh;
-    animation: reveal unreveal linear both ;
-    animation-timeline: view();
-    animation-range: reveal entry 20% entry 100%;
 }
 
 @media (orientation: portrait) and (max-width: 768px) {
