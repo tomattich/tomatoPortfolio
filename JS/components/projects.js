@@ -279,7 +279,7 @@ export function Projects() {
                 button.classList.add("active");
 
                 const filter = button.dataset.filter;
-                isExpanded = false; // Reset expansion on filter change
+                isExpanded = false; 
 
                 if (filter === "all") {
                     currentFilteredProjects = projects;

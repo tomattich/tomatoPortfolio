@@ -14,7 +14,7 @@ export function renderCover() {
             <p>a Frontend Developer</p>
             <div class="coverButtons">
                 <button class="buttons gotProject">Got a project?</button>
-                <button class="buttons myResume">My resume </button>
+                <a href="CVplaceHolder.pdf" target="_blank" class="buttons myResume">My resume </a>
             </div>
         </div>
         <div class="coverLanguages">
@@ -60,6 +60,5 @@ export function renderCover() {
             </div>
         </div>
         `;
-    const gotProject = document.querySelector(".gotProject");
-    const myResume = document.querySelector(".myResume");
+
 }
