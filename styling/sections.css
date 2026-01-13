@@ -166,6 +166,32 @@
     animation-delay: .4s;
 }
 
+.javaScript>svg {
+    color: #f7df1e;
+    filter: drop-shadow(0 0 .5rem #f7df1e);
+}
+
+.cpp>svg {
+    color: #1e75f7;
+    filter: drop-shadow(0 0 .5rem #1ec1f7);
+}
+
+.css>svg {
+    color: #6205e4;
+    filter: drop-shadow(0 0 .5rem #6205e4);
+}
+
+.react>svg {
+    color: #61dafb;
+    filter: drop-shadow(0 0 .5rem #61dafb);
+}
+
+.html>svg {
+    color: #e34f26;
+    filter: drop-shadow(0 0 .5rem #e34f26);
+}
+
+
 /* Summary / About Section */
 /* Summary grid layout with skills and about me sections */
 .summary {

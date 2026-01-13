@@ -210,6 +210,7 @@ export function Projects() {
 
             projectsToShow.forEach((project) => {
                 const originalIndex = projects.indexOf(project);
+
                 allProjectsItemsContainer.innerHTML += `
                 <div class="allProjectsItem" data-project-index="${originalIndex}" data-image-index="0">
                     <button class="buttons prevImgButton">
@@ -243,20 +244,20 @@ export function Projects() {
 
             // Remove existing button
 
-            const existingBtn = document.querySelector('.showMoreProjectsButton');
-            if (existingBtn) {
-                existingBtn.remove();
+            const existingButton = document.querySelector('.showMoreProjectsButton');
+            if (existingButton) {
+                existingButton.remove();
             }
 
             // Handle Show More / Show Less Button
 
             if (currentFilteredProjects.length > 5) {
-                const btnText = isExpanded ? "Show Less" : "Show More";
-                allProjectsItemsContainer.insertAdjacentHTML('afterend', `<button class="showMoreProjectsButton">${btnText}</button>`);
+                const buttonText = isExpanded ? "Show Less" : "Show More";
+                allProjectsItemsContainer.insertAdjacentHTML('afterend', `<button class="showMoreProjectsButton">${buttonText}</button>`);
 
-                const showMoreBtn = document.querySelector('.showMoreProjectsButton');
+                const showMoreButton = document.querySelector('.showMoreProjectsButton');
 
-                showMoreBtn.addEventListener('click', () => {
+                showMoreButton.addEventListener('click', () => {
                     isExpanded = !isExpanded;
                     renderProjectsList();
                 });
@@ -273,7 +274,7 @@ export function Projects() {
         filterButtons.forEach(button => {
             button.addEventListener("click", () => {
 
-                filterButtons.forEach(btn => btn.classList.remove("active"));
+                filterButtons.forEach(button => button.classList.remove("active"));
 
                 button.classList.add("active");
 
