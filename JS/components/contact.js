@@ -3,6 +3,7 @@
  * Renders the contact section with form and contact details.
  * Handles form validation and submission simulation.
  */
+
 export function contact() {
     const contact = document.querySelector(".contact");
     contact.innerHTML = `
@@ -60,7 +61,7 @@ export function contact() {
     const contactInputEmailPopOut = document.querySelector(".contactInputEmailPopOut");
     const contactInputMessagePopOut = document.querySelector(".contactInputMessagePopOut");
     const contactSuccess = document.querySelector(".contactSuccess");
-
+    
     /* =========================================
        VALIDATION
        ========================================= */

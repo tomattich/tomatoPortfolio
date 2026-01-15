@@ -203,23 +203,23 @@ export function Projects() {
          * Toggles between showing a limited number (5) and all projects based on expansion state.
          * Also manages the "Show More/Less" button visibility.
          */
+
+        let imgIndex = 0;
         function renderProjectsList() {
             allProjectsItemsContainer.innerHTML = "";
 
             const projectsToShow = isExpanded ? currentFilteredProjects : currentFilteredProjects.slice(0, 5);
 
             projectsToShow.forEach((project) => {
-                const originalIndex = projects.indexOf(project);
-
                 allProjectsItemsContainer.innerHTML += `
-                <div class="allProjectsItem" data-project-index="${originalIndex}" data-image-index="0">
+                <div class="allProjectsItem">
                     <button class="buttons prevImgButton">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
                         </svg>
                     </button>
                     <div class="allProjectsItemImage">
-                        <img class="allProjectsItemImageScroll" src="${project.images[0]}" alt="${project.name}">
+                        <img class="allProjectsItemImageScroll" src="${project.images[imgIndex]}" alt="${project.name}">
                     </div>
                     <button class="buttons nextImgButton">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -279,7 +279,7 @@ export function Projects() {
                 button.classList.add("active");
 
                 const filter = button.dataset.filter;
-                isExpanded = false; 
+                isExpanded = false;
 
                 if (filter === "all") {
                     currentFilteredProjects = projects;
@@ -294,26 +294,40 @@ export function Projects() {
 
         allProjectsItemsContainer.addEventListener("click", (e) => {
             const item = e.target.closest(".allProjectsItem");
-            if (!item) return;
 
-            const project = projects[item.dataset.projectIndex];
+            // Get the index of the clicked item within its parent container
+            const allItems = Array.from(allProjectsItemsContainer.querySelectorAll(".allProjectsItem"));
+            const itemIndex = allItems.indexOf(item);
+
+            // Get the corresponding project from the currently displayed projects
+            const projectsToShow = isExpanded ? currentFilteredProjects : currentFilteredProjectsx;
+            const project = projectsToShow[itemIndex];
+
+            if (!project) return;
+
             const img = item.querySelector(".allProjectsItemImageScroll");
-            let imgIndex = parseInt(item.dataset.imageIndex);
 
-            if (e.target.closest(".nextImgButton")) {
+            // Get current image index from the src
+            
+            for (let i = 0; i < project.images.length; i++) {
+                if (img.src.includes(project.images[i])) {
+                    imgIndex = i;
+                }
+            }
+
+            if (e.target.classList.contains("nextImgButton") || e.target.closest(".nextImgButton")) {
                 imgIndex += 1;
                 if (imgIndex >= project.images.length) {
                     imgIndex = 0;
                 }
+                img.src = project.images[imgIndex];
             } else if (e.target.closest(".prevImgButton")) {
                 imgIndex -= 1;
                 if (imgIndex < 0) {
                     imgIndex = project.images.length - 1;
                 }
+                img.src = project.images[imgIndex];
             }
-
-            item.dataset.imageIndex = imgIndex;
-            img.src = project.images[imgIndex];
         });
     }
     allProjects();

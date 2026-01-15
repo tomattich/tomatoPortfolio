@@ -5,7 +5,6 @@
 
 /**
  * Scrolls the window to the specified element with smooth behavior.
- * @param {HTMLElement} element - The target element to display.
  */
 export function scrollToSection(element) {
     if (element) {
@@ -14,7 +13,6 @@ export function scrollToSection(element) {
         });
     }
 }
-
 
 /**
  * Renders the main page layout structure.
@@ -274,3 +272,4 @@ export function globalButtons() {
     })
 
 }
+

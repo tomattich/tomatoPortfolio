@@ -233,6 +233,7 @@
         background-color: transparent;
         svg {
             fill: var(--flavorColor);
+            filter: drop-shadow(0 0 .5rem var(--flavorColor));
             transition: .3s ease-in-out;
         }
     }

@@ -43,6 +43,7 @@
 
 /* Styled contact form container */
 .contactForm {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -51,6 +52,7 @@
     width: 32dvw;
     justify-content: center;
     gap: 1rem;
+    overflow: hidden;
 }
 
 /* Standard input styling with flavor border color */
@@ -61,9 +63,11 @@
     background-color: transparent;
     color: currentColor;
     width: 100%;
-    &::placeholder {
-        color: var(--flavorColor);
-        opacity: .5;
+    transition: all .3s ease-in-out;
+    text-shadow: 0 0 .15rem currentColor;
+    &:focus {
+        box-shadow: 0 0 .3rem .1rem var(--flavorColor);
+        filter: drop-shadow(0 0 2rem var(--flavorColor));
     }
 }
 
@@ -76,9 +80,15 @@
     width: 100%;
     resize: none;
     height: 10rem;
+    transition: all .3s ease-in-out;
+    text-shadow: 0 0 .15rem currentColor;
     &::placeholder {
         color: var(--flavorColor);
         opacity: .5;
+    }
+    &:focus {
+        box-shadow: 0 0 .3rem .1rem var(--flavorColor);
+        filter: drop-shadow(0 0 2rem var(--flavorColor));
     }
 }
 
@@ -90,7 +100,8 @@
 
 .contactForm button:hover {
     background-color: var(--flavorColor);
-    color: white;
+    color: black;
+    box-shadow: 0 0 1rem .1rem var(--flavorColor);
 }
 
 .contact span {
