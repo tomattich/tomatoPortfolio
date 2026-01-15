@@ -71,6 +71,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+        filter: drop-shadow(0 0 .5rem var(--flavorColor));
+    }
 }
 
 @media (orientation: portrait) and (max-width: 768px) {

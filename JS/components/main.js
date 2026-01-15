@@ -33,13 +33,9 @@ export function mainPage() {
         <div class="allProjectsContainer">
             <h1>All Projects</h1>
             <hr class="line" />
-            <ul>
-                <li></li>
-            </ul>
+            <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
             <hr class="line" />
-            <ul>
-                <li></li>
-            </ul>
+            <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
         </div>
         <div class="allProjectsItemsContainer">
             
@@ -49,26 +45,18 @@ export function mainPage() {
         <div class="featuredWorks">
             <h1>Featured Works <span>!</span></h1>
             <hr class="line" />
-            <ul>
-                <li></li>
-            </ul>
+            <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
             <hr class="line" />
-            <ul>
-                <li></li>
-            </ul>
+            <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
             <div class="projectsContainer"></div>
         </div>
     </div>
         <div class="testimonials">
             <h1>Testimonials <span>!</span></h1>
             <hr class="line" />
-            <ul>
-                <li></li>
-            </ul>
+            <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
             <hr class="line" />
-            <ul>
-                <li></li>
-            </ul>
+            <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
             <div class="testimonialsContainer">
             </div>
         </div>

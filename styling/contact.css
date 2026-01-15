@@ -53,6 +53,11 @@
     justify-content: center;
     gap: 1rem;
     overflow: hidden;
+    transition: all .3s ease-in-out;
+    &:hover {
+        box-shadow: 0 0 .3rem .1rem var(--flavorColor);
+        transform: scale(1.01);
+    }
 }
 
 /* Standard input styling with flavor border color */
@@ -144,6 +149,12 @@
     border: var(--flavorColor) .1rem solid;
     padding: 1rem;
     width: 100%;
+    transition: all .3s ease-in-out;
+    &:hover {
+        box-shadow: 0 0 .3rem .1rem var(--flavorColor);
+        filter: drop-shadow(0 0 2rem var(--flavorColor));
+        transform: scale(1.01);
+    }
 }
 
 .contactInputName {

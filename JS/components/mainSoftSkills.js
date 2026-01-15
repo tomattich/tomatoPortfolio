@@ -13,13 +13,9 @@ export function mainSoftSkills() {
             <button class="buttons mainSoftSkillsChanger2"><svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></g></svg></button>
         </div>
         <hr class="line" />
-        <ul>
-            <li></li>
-        </ul>
+        <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
         <hr class="line" />
-        <ul>
-            <li></li>
-        </ul>
+        <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
         <div class="mainSoftSkillsContainer">
         </div>
     `;
@@ -128,14 +124,14 @@ export function mainSoftSkills() {
                     hardSkills3.style.display = "flex";
                 }, 100);
             }, 300);
-            
+
             number1 = document.querySelector(".n1");
             number2 = document.querySelector(".n2");
             number3 = document.querySelector(".n3");
             calcNumber(number1, 99);
             calcNumber(number2, 80);
             calcNumber(number3, 99);
-            
+
             mainSoftSkillsTitle.style.animation = "reveal .3s ease-in-out";
             setTimeout(() => {
                 mainSoftSkillsTitle.style.animation = "none";

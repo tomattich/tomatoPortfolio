@@ -7,13 +7,6 @@ let fetchedProjects;
 let projects;
 
 // Fetch projects data from JSON file
-
-/**
- * Fetches project data from the JSON file.
- * Populates the fetchedProjects and projects variables.
- * @async
- * @returns {Promise<void>}
- */
 export async function fetchProjects() {
     try {
         const response = await fetch("JS/data/projects.json");
@@ -25,10 +18,6 @@ export async function fetchProjects() {
     }
 }
 
-/**
- * Initializes the Projects component.
- * Sets up featured projects slider, project navigation, and the "All Projects" section with filtering.
- */
 export function Projects() {
     const projectsContainer = document.querySelector(".projectsContainer");
     const featuredProjects = projects.filter(project => project.technologies.featured === true);
@@ -36,11 +25,6 @@ export function Projects() {
 
     // Generate HTML list of technologies used in project
 
-    /**
-     * Generates HTML list items for technologies used in a project.
-     * @param {Object} technologies - Object containing technology flags (e.g., {backend: true}).
-     * @returns {string} HTML string of list items.
-     */
     function renderTech(technologies) {
         let techList = "";
         for (let tech of Object.keys(technologies)) {
@@ -53,11 +37,6 @@ export function Projects() {
 
     // Generate HTML list of genres used in project
 
-    /**
-     * Generates HTML list items for project genres.
-     * @param {Object} genres - Object containing genre flags.
-     * @returns {string} HTML string of list items.
-     */
     function renderGenres(genres) {
         let genreList = "";
         for (let genre of Object.keys(genres)) {
@@ -67,11 +46,9 @@ export function Projects() {
         }
         return genreList;
     }
+
     // Render the current featured project
-    /**
-     * Renders the currently selected featured project into the DOM.
-     * Updates the project details, image, and navigation dots.
-     */
+
     function renderFeaturedProjects() {
         const featuredProject = featuredProjects[index];
         projectsContainer.innerHTML = `
@@ -177,32 +154,23 @@ export function Projects() {
     renderFeaturedProjects();
 
     // All projects rendering function
-
-    /**
-     * Initializes and renders the "All Projects" section.
-     * Handles rendering, filtering, and "Show More/Less" functionality.
-     */
     function allProjects() {
         const allProjectsItemsContainer = document.querySelector(".allProjectsItemsContainer");
 
         allProjectsItemsContainer.insertAdjacentHTML('beforebegin', `
-        <div class="projectFilterOptions">
-            <button class="buttons filterButton active" data-filter="all">All</button>
-            <button class="buttons filterButton" data-filter="e-shop">E-shop</button>
-            <button class="buttons filterButton" data-filter="games">Games</button>
-            <button class="buttons filterButton" data-filter="agriculture">Agriculture</button>
-            <button class="buttons filterButton" data-filter="chat">Chat</button>
-        </div>
+        <div class="projectFilterOptionsContainer">
+            <select class="projectFilterOptions">
+                <option class="buttons filterButton active" value="all">All</option>
+                <option class="buttons filterButton" value="e-shop">E-shop</option>   
+                <option class="buttons filterButton" value="games">Games</option>
+                <option class="buttons filterButton" value="agriculture">Agriculture</option>
+                <option class="buttons filterButton" value="chat">Chat</option>
+            </select>
+            <svg class="projectFilterOptionsArrow" viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_down [#338]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-220.000000, -6684.000000)" fill="var(--flavorColor)"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M164.292308,6524.36583 L164.292308,6524.36583 C163.902564,6524.77071 163.902564,6525.42619 164.292308,6525.83004 L172.555873,6534.39267 C173.33636,6535.20244 174.602528,6535.20244 175.383014,6534.39267 L183.70754,6525.76791 C184.093286,6525.36716 184.098283,6524.71997 183.717533,6524.31405 C183.328789,6523.89985 182.68821,6523.89467 182.29347,6524.30266 L174.676479,6532.19636 C174.285736,6532.60124 173.653152,6532.60124 173.262409,6532.19636 L165.705379,6524.36583 C165.315635,6523.96094 164.683051,6523.96094 164.292308,6524.36583" id="arrow_down-[#338]"> </path> </g> </g> </g> </g></svg>        </div>
         `);
 
         let isExpanded = false;
         let currentFilteredProjects = projects;
-
-        /**
-         * Renders the list of projects into the container.
-         * Toggles between showing a limited number (5) and all projects based on expansion state.
-         * Also manages the "Show More/Less" button visibility.
-         */
 
         let imgIndex = 0;
         function renderProjectsList() {
@@ -268,34 +236,35 @@ export function Projects() {
 
         renderProjectsList();
 
-        // Filter eventlisteners
+        // Filter event listener
 
-        const filterButtons = document.querySelectorAll(".filterButton");
-        filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
+        const filterSelect = document.querySelector(".projectFilterOptions");
+        filterSelect.addEventListener("change", (e) => {
+            const filter = e.target.value;
+            isExpanded = false;
 
-                filterButtons.forEach(button => button.classList.remove("active"));
-
-                button.classList.add("active");
-
-                const filter = button.dataset.filter;
-                isExpanded = false;
-
-                if (filter === "all") {
-                    currentFilteredProjects = projects;
-                } else {
-                    currentFilteredProjects = projects.filter(project => project.genres && project.genres[filter] === true);
-                }
-                renderProjectsList();
-            });
+            if (filter === "all") {
+                currentFilteredProjects = projects;
+            } else {
+                currentFilteredProjects = projects.filter(project => project.genres && project.genres[filter] === true);
+            }
+            renderProjectsList();
         });
 
-        // Event delegation for image navigation code
+        const projectFilterOptionsArrow = document.querySelector(".projectFilterOptionsArrow");
+        filterSelect.addEventListener("click", () => {
+               if (projectFilterOptionsArrow.style.transform === "rotate(180deg)") {
+                   projectFilterOptionsArrow.style.transform = "rotate(0deg)";
+               } else {
+                   projectFilterOptionsArrow.style.transform = "rotate(180deg)";
+               }
+        });
 
         allProjectsItemsContainer.addEventListener("click", (e) => {
             const item = e.target.closest(".allProjectsItem");
 
             // Get the index of the clicked item within its parent container
+
             const allItems = Array.from(allProjectsItemsContainer.querySelectorAll(".allProjectsItem"));
             const itemIndex = allItems.indexOf(item);
 
@@ -308,7 +277,7 @@ export function Projects() {
             const img = item.querySelector(".allProjectsItemImageScroll");
 
             // Get current image index from the src
-            
+
             for (let i = 0; i < project.images.length; i++) {
                 if (img.src.includes(project.images[i])) {
                     imgIndex = i;

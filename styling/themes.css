@@ -92,3 +92,7 @@
 .darkmode .myResume:hover {
     color: black;
 }
+
+.darkmode .projectFilterOptions>option {
+    background-color: black;
+}

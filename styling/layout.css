@@ -47,6 +47,7 @@ header button {
 }
 
 /* Navigation */
+
 nav {
     display: flex;
     gap: 1.5rem;
@@ -161,6 +162,8 @@ nav button:hover {
 }
 
 /* Main */
+
+/* Main container layout */
 main {
     grid-area: main;
     height: fit-content;
@@ -169,10 +172,11 @@ main {
 }
 
 /* Footer */
+
 /* Main footer container layout */
 footer {
     grid-area: footer;
-    padding: 3rem 10%; /* increased padding closer to Hyprland's spacing */
+    padding: 3rem 10%; 
     background-color: #e9e9e9;
     display: flex;
     flex-direction: column;
@@ -189,7 +193,7 @@ footer {
     flex-direction: row;
     width: 100%;
     gap: 2rem;
-    flex-wrap: wrap; /* responsive */
+    flex-wrap: wrap; 
 }
 
 .footerColumn {
@@ -204,10 +208,9 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     border-bottom: .1em solid var(--flavorColor);
-    text-decoration: none; /* Removed underline from header if it was there */
+    text-decoration: none; 
 }
 
-/* Specific styling to match the previous p tag rule or override it */
 .footerNavigation p {
     text-decoration: none; 
 }
@@ -219,7 +222,7 @@ footer {
     border: none;
     font-size: 1rem;
     text-align: left;
-    color: #555; /* Slightly lighter for links like Hyprland/standard footers */
+    color: #555; 
     transition: color 0.3s ease;
 }
 
@@ -230,7 +233,7 @@ footer {
 }
 
 .footerNavigation button svg {
-    display: block; /* Removes extra space below inline SVGs */
+    display: block;
     transition: all 0.3s ease;
 }
 

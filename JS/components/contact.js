@@ -9,13 +9,9 @@ export function contact() {
     contact.innerHTML = `
     <h1>Contact <span>!</span></h1>
     <hr class="line" />
-    <ul>
-        <li></li>
-    </ul>
+    <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
     <hr class="line" />
-    <ul>
-        <li></li>
-    </ul>
+    <svg class="circle-separator" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
     <div class="contactContainer">
         <div class="contactText">
             <h2>Let<span>'</span>s get in touch</h2>
@@ -61,7 +57,7 @@ export function contact() {
     const contactInputEmailPopOut = document.querySelector(".contactInputEmailPopOut");
     const contactInputMessagePopOut = document.querySelector(".contactInputMessagePopOut");
     const contactSuccess = document.querySelector(".contactSuccess");
-    
+
     /* =========================================
        VALIDATION
        ========================================= */
