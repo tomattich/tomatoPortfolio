@@ -300,7 +300,7 @@ export function Projects() {
             const itemIndex = allItems.indexOf(item);
 
             // Get the corresponding project from the currently displayed projects
-            const projectsToShow = isExpanded ? currentFilteredProjects : currentFilteredProjectsx;
+            const projectsToShow = isExpanded ? currentFilteredProjects : currentFilteredProjects.slice(0, 5);
             const project = projectsToShow[itemIndex];
 
             if (!project) return;
