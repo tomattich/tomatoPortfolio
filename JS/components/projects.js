@@ -253,6 +253,7 @@ export function Projects() {
 
         const projectFilterOptionsArrow = document.querySelector(".projectFilterOptionsArrow");
         
+        
         filterSelect.addEventListener("click", () => {
                if (projectFilterOptionsArrow.style.transform === "rotate(180deg)") {
                    projectFilterOptionsArrow.style.transform = "rotate(0deg)";

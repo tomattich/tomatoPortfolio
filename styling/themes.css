@@ -96,3 +96,7 @@
 .darkmode .projectFilterOptions>option {
     background-color: black;
 }
+
+.darkmode .loading-screen {
+    background-color: black;
+}
