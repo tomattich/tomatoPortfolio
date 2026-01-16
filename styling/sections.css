@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 15rem;
     font-weight: 700;
     height: 100dvh;
     flex-direction: row;
@@ -413,10 +413,11 @@
     appearance: none;
     background-color: transparent;
     color: currentColor;
-    border: .2rem solid var(--flavorColor);
+    border: solid .1rem var(--flavorColor);
     padding: .5rem;
     width: 10rem;
     transition: all .3s ease-in-out;
+    filter: drop-shadow(0 0 .1rem var(--flavorColor));
 }
 
 .projectFilterOptions>option {
@@ -433,6 +434,9 @@
     bottom: .1rem;
     height: 1rem;
     width: 1rem;
+    transition: all .3s ease-in-out;
+    filter: drop-shadow(0 0 .1rem var(--flavorColor));
+    z-index: -1;
 }
 
 .allProjectsItemsContainer {

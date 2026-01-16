@@ -252,12 +252,19 @@ export function Projects() {
         });
 
         const projectFilterOptionsArrow = document.querySelector(".projectFilterOptionsArrow");
+        
         filterSelect.addEventListener("click", () => {
                if (projectFilterOptionsArrow.style.transform === "rotate(180deg)") {
                    projectFilterOptionsArrow.style.transform = "rotate(0deg)";
                } else {
                    projectFilterOptionsArrow.style.transform = "rotate(180deg)";
                }
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!filterSelect.contains(e.target) && !projectFilterOptionsArrow.contains(e.target)) {
+                projectFilterOptionsArrow.style.transform = "rotate(0deg)";
+            }
         });
 
         allProjectsItemsContainer.addEventListener("click", (e) => {
@@ -269,11 +276,9 @@ export function Projects() {
             const itemIndex = allItems.indexOf(item);
 
             // Get the corresponding project from the currently displayed projects
+
             const projectsToShow = isExpanded ? currentFilteredProjects : currentFilteredProjects.slice(0, 5);
             const project = projectsToShow[itemIndex];
-
-            if (!project) return;
-
             const img = item.querySelector(".allProjectsItemImageScroll");
 
             // Get current image index from the src

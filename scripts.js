@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Load dark mode preference from localStorage
 
-    const mode = localStorage.getItem("mode") || "light";
+    const mode = localStorage.getItem("mode") || "dark";
     if (mode === "dark") {
         document.body.classList.add("darkmode");
         const footer = document.querySelector("footer");
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderSummary();
     globalButtons();
     mainSoftSkills();
+    
     // Fetch projects data before initializing Projects component
 
     await fetchProjects();
