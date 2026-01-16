@@ -16,7 +16,7 @@
     justify-items: center;
 }
 
-@media (orientation: portrait) and  (max-width: 768px) {
+@media  (max-width: 767px) {
     .cover {
         grid-template-areas: "coverText"
                             "coverLanguages";
