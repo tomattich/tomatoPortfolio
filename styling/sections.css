@@ -6,33 +6,45 @@
 /* Cover / Hero Section */
 /* Main cover container with centered flex layout */
 .cover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15rem;
+    display: grid;
+    grid-template-areas: "coverText coverLanguages";
+    grid-template-columns: 1fr 1fr;
     font-weight: 700;
+    gap: 5rem;
     height: 100dvh;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
 }
 
 @media (orientation: portrait) and  (max-width: 768px) {
     .cover {
-        flex-direction: column;
-        height: 100dvh;
-        gap: 6rem;
-        margin-top: 10rem;
+        grid-template-areas: "coverText"
+                            "coverLanguages";
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 100dvh;
+        gap: 2rem;
+        margin-top: 5rem;
+        padding: 2rem;
     }
 }
 
 .coverText {
+    grid-area: coverText;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-self: flex-end;
     gap: 1rem;
     width: fit-content;
     max-width: 100%;
     zoom: 1.2;
+}
+
+@media (orientation: portrait) and  (max-width: 768px) {
+    .coverText {
+        justify-self: center;
+    }
 }
 
 .coverText span {
@@ -92,13 +104,23 @@
 }
 
 .coverLanguages {
+    grid-area: coverLanguages;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    justify-self: flex-start;
     width: fit-content;
     max-width: 100%;
     align-items: center;
     zoom: 0.8;
+}
+
+@media (orientation: portrait) and  (max-width: 768px) {
+    .coverLanguages {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        justify-self: center;
+    }
 }
 
 .languages {
