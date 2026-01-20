@@ -15,6 +15,12 @@
     animation-range: entry 20% entry 100%;
 }
 
+@media (orientation: portrait) and (max-width: 768px) {
+    .contact {
+        width: 100dvw;
+    }
+}
+
 .contact ul {
     list-style: inside;
     margin-left: 1rem;  

@@ -16,7 +16,7 @@
     justify-items: center;
 }
 
-@media  (max-width: 767px) {
+@media  (max-width: 768px) {
     .cover {
         grid-template-areas: "coverText"
                             "coverLanguages";
@@ -24,6 +24,7 @@
         height: auto;
         min-height: 100dvh;
         gap: 2rem;
+        width: 100dvw;
         margin-top: 5rem;
         padding: 2rem;
     }
@@ -242,6 +243,7 @@
         grid-template-areas: "skills skills skills"
                             "aboutMe aboutMe aboutMe";
         padding: 2rem;
+        width: 100dvw;
     }
     
     .summary :nth-child(1) {
@@ -357,6 +359,12 @@
     min-height: 100dvh;
     content-visibility: auto;
     contain-intrinsic-size: 100dvh;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .allProjects {
+        width: 100dvw;
+    }
 }
 
 .allProjectsContainer {

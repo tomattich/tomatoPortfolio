@@ -178,6 +178,11 @@ footer {
     gap: 3rem;
 }
 
+@media (orientation: portrait) and (max-width: 768px) {
+    footer {
+        width: 100dvw;
+    }
+}
 .footerNavigation {
     display: flex;
     justify-content: space-between;
@@ -188,6 +193,12 @@ footer {
     flex-wrap: wrap; 
 }
 
+@media (orientation: portrait) and (max-width: 768px) {
+    .footerNavigation {
+        zoom: .8;
+        justify-content: center;
+    }
+}
 .footerColumn {
     display: flex;
     justify-content: center;
@@ -281,4 +292,3 @@ footer {
 .madeBy {
     font-size: 0.8rem;
 }
-

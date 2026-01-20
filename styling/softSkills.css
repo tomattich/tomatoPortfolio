@@ -6,19 +6,18 @@
 .mainSoftSkills {
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     min-height: 100dvh;
     animation: reveal linear both;
     animation-timeline: view();
     animation-range: entry 20% entry 80%;
 }
-
-.mainSoftSkills li {
-    position: relative;
-    right: .1rem;
-    zoom: .8;
+@media (orientation: portrait) and (max-width: 768px) {
+    .mainSoftSkills {
+        width: 100dvw;
+    }
 }
+
 
 .mainSoftSkillsContainer {
     display: flex;

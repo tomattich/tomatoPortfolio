@@ -36,7 +36,6 @@ body {
 @media (orientation: portrait) and (max-width: 768px) {
     body {
         overflow-x: hidden;
-        zoom: .9;
     }
 }
 /* Scrollbar Styles */
