@@ -59,7 +59,7 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .testimonialsContainer {
-        width: 90dvw;
+        width: 75dvw;
     }
 }
 
@@ -110,7 +110,7 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .testimonial1, .testimonial2, .testimonial3 {
-        width: 90dvw;
+        width: 75dvw;
     }
 }
 

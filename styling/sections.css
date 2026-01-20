@@ -1,6 +1,6 @@
 /* =========================================
    PAGE SECTIONS
-   Cover, Summary, Skills, About, Projects, Testimonials
+   Cover, Summary, Skills, About, Projects
    ========================================= */
 
 /* Cover / Hero Section */
@@ -38,7 +38,6 @@
     gap: 1rem;
     width: fit-content;
     max-width: 100%;
-    zoom: 1.2;
 }
 
 @media (orientation: portrait) and  (max-width: 768px) {
@@ -49,7 +48,7 @@
 
 .coverText span {
     color: var(--flavorColor);
-    zoom: 1.5;
+    font-size: 1.5em;
     text-shadow: 0 0 .5rem var(--flavorColor);
 }
 
@@ -90,7 +89,7 @@
 
 .coverTextName h1 span {
     color: var(--flavorColor);
-    zoom: 1.5;
+    font-size: 1.5em;
 }
 
 .coverButtons {
@@ -112,7 +111,6 @@
     width: fit-content;
     max-width: 100%;
     align-items: center;
-    zoom: 0.8;
 }
 
 @media (orientation: portrait) and  (max-width: 768px) {
@@ -129,7 +127,6 @@
     justify-content: center;
     align-items: center;
     padding: .5rem;
-    zoom: 1.25;
     gap: 1rem;
     animation: reveal 2s ease-in-out;
 }
@@ -360,9 +357,6 @@
     min-height: 100dvh;
     content-visibility: auto;
     contain-intrinsic-size: 100dvh;
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 20% entry 100%;
 }
 
 .allProjectsContainer {
@@ -392,12 +386,10 @@
 
 .allProjectsItem ul {
     margin: .5rem 0 .5rem 0;
-    zoom: 1.2;
 }
 
 .allProjectsContainer li {
     position: relative;
-    zoom: .8;
 }
 
 /* Circle separator for decorative elements */
@@ -519,7 +511,7 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .allProjectsItem {
-        zoom: .8;
+        /* Removed zoom: .8; */
     }
 }
 
@@ -566,9 +558,6 @@
     align-items: center;
     content-visibility: auto;
     contain-intrinsic-size: 100dvh;
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 20% entry 100%;
 }
 
 .featuredWorks span {
@@ -578,7 +567,6 @@
 
 .featuredWorks li {
     position: relative;
-    zoom: .8;
 }
 
 @media (orientation: portrait) and (max-width: 768px) {
@@ -609,7 +597,6 @@
                             "prevNextButtons";
         width: 90%;
         max-width: 100%;
-        zoom: 0.8;
     }
 }
 
@@ -625,7 +612,6 @@
     .projectImageContainer {
         align-items: center;
         width: 100%;
-        zoom: 0.8;
     }
 }
 

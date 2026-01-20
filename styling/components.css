@@ -45,7 +45,6 @@ ul {
 ul li {
     position: relative;
     right: .7rem;
-    zoom: .8;
     font-weight: bold;
 }
 
@@ -108,8 +107,6 @@ progress {
     padding: 1rem;
     gap: 1rem;
     position: absolute;
-    position-anchor: --flavorButton;
-    position-area: bottom;
     top: .5rem;
     animation: renderRight .3s ease-in-out;
     z-index: 1;
@@ -122,7 +119,6 @@ progress {
     color: #000;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-    zoom: 1.5;
 }
 
 .flavorButtons:hover {
@@ -151,7 +147,6 @@ progress {
     border: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-    zoom: 1.5;
 }
 .optionsList button:hover {
     color: var(--flavorColor);
@@ -164,7 +159,6 @@ progress {
 
 .flavorButton {
     animation: renderUp 1s ease-in-out;
-    anchor-name: --flavorButton;
 }
 
 /* Floating Elements */
@@ -219,14 +213,10 @@ progress {
 
 .sideOptionsList {
     position: fixed;
-    position-anchor: --sideOptionsButton;
-    position-area: left;
     top: 0;
 }
 
 .sideProjectsList {
     display: none;
     position: fixed;
-    position-anchor: --sideOptionsButton;
-    position-area: left;
 }
