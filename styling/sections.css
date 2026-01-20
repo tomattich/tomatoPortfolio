@@ -415,12 +415,6 @@
     fill: currentColor;
 }
 
-@media (orientation: portrait) and (max-width: 768px) {
-    .circle-separator {
-        left: .1rem;
-    }
-}
-
 .projectFilterOptionsContainer {
     display: flex;
     flex-direction: row;
