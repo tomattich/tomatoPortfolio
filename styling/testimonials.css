@@ -10,6 +10,7 @@
     animation: renderRight 1s ease-in-out;
     gap: 1rem;
     height: 100dvh;
+    width: 100dvw;
 }
 
 .testimonialsPage span {
@@ -27,6 +28,12 @@
     animation-timeline: view();
     animation-range: entry 20% entry 100%;
     overflow-x: hidden;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .testimonials {
+        width: 100dvw;
+    }
 }
 
 .testimonials span {
