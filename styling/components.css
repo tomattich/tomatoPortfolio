@@ -213,10 +213,16 @@ progress {
 
 .sideOptionsList {
     position: fixed;
-    top: 0;
+    top: auto;
+    bottom: 1rem;
+    right: 5rem;
+
 }
 
 .sideProjectsList {
     display: none;
     position: fixed;
+    top: auto;
+    bottom: 1rem;
+    right: 5rem;
 }

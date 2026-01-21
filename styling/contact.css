@@ -17,7 +17,7 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .contact {
-        width: 100dvw;
+        width: 100%;
     }
 }
 

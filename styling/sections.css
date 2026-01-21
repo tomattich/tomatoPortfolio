@@ -24,7 +24,7 @@
         height: auto;
         min-height: 100dvh;
         gap: 2rem;
-        width: 100dvw;
+        width: 100%;
         margin-top: 5rem;
         padding: 2rem;
     }
@@ -243,7 +243,7 @@
         grid-template-areas: "skills skills skills"
                             "aboutMe aboutMe aboutMe";
         padding: 2rem;
-        width: 100dvw;
+        width: 100%;
     }
     
     .summary :nth-child(1) {
@@ -363,7 +363,7 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .allProjects {
-        width: 100dvw;
+        width: 100%;
     }
 }
 
@@ -467,7 +467,7 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .allProjectsItemsContainer {
-        width: 100dvw;
+        width: 100%;
         gap : 0;
     }
 }
@@ -580,7 +580,7 @@
 
 @media (orientation: portrait) and (max-width: 768px) {
     .featuredWorks {
-        width: 100dvw;
+        width: 100%;
         gap : 0;
     }
 }

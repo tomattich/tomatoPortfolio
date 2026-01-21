@@ -180,7 +180,7 @@ footer {
 
 @media (orientation: portrait) and (max-width: 768px) {
     footer {
-        width: 100dvw;
+        width: 100%;
     }
 }
 .footerNavigation {
