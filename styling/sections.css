@@ -518,12 +518,6 @@
 
 }
 
-@media (orientation: portrait) and (max-width: 768px) {
-    .allProjectsItem {
-        /* Removed zoom: .8; */
-    }
-}
-
 .allProjectsItemGenres {
     display: flex;
     flex-direction: column;
